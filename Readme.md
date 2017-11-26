@@ -2,5 +2,5 @@ RTS (Realtime scrapper) is a tool developed to scrap all pastie sites,github,red
 
 Contributors:
 
-  Naveen Rudrappa                                                                                                                             Padma Shivakumar
-
+  Naveen Rudrappa                                                                                                                        
+  Padma Shivakumar
