@@ -9,11 +9,16 @@ import com.realtimescrapper.dao.entity.Result;
 import com.realtimescrapper.dao.util.DaoUtil;
 import com.relatimescrapper.pojo.Data;
 
+import net.amygdalum.stringsearchalgorithms.io.StringCharProvider;
+import net.amygdalum.stringsearchalgorithms.search.Horspool;
+import net.amygdalum.stringsearchalgorithms.search.StringFinder;
+
 public class SearchThread implements Runnable{
 
 	private Data data;
 	private static DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
 	private static Date dateobj = new Date();
+	private Horspool stringSearch;
 	
 	public void initialize(Data data)
 	{
@@ -33,7 +38,14 @@ public class SearchThread implements Runnable{
 		ArrayList<String> termsFound = new ArrayList<String>();
 		for(String s:data.getSearchTerms())
 		{
+			/**
 			if(response.contains(s))
+			{
+				termsFound.add(s);
+			}**/
+			stringSearch = new Horspool(s);
+			StringFinder finder = stringSearch.createFinder(new StringCharProvider(response, 0));
+			if(finder.findAll().size()>0)
 			{
 				termsFound.add(s);
 			}

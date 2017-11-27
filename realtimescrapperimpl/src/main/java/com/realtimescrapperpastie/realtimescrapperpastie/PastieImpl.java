@@ -15,6 +15,7 @@ import org.apache.log4j.Logger;
 import com.google.common.collect.EvictingQueue;
 import com.realtimescrapper.base.Producer;
 import com.realtimescrapper.base.Scrapper;
+import com.realtimescrapper.utilities.ConfigData;
 import com.realtimescrapper.utilities.PastieParseAndSearch;
 import com.realtimescrapperpastie.utilities.Difference;
 import com.relatimescrapper.pojo.Data;
@@ -74,7 +75,7 @@ public class PastieImpl implements Scrapper{
 			{   String id=(String)iter.next();
 				if(!evictingQueue.contains(id))
 					{
-					Producer.send(new Data(downloadurl.replace("{id}", id),searchTerms), "HelloKafkaTopic61");
+					Producer.send(new Data(downloadurl.replace("{id}", id),searchTerms), ConfigData.topicName);
 					}
 		       
 				evictingQueue.add(id);

@@ -9,6 +9,8 @@ import com.realtimescrapper.base.NotificationConsumerGroup;
 import com.realtimescrapper.base.Producer;
 import com.realtimescrapper.base.Scrapper;
 import com.realtimescrapper.base.ScrapperImpl;
+import com.realtimescrapper.utilities.ConfigData;
+
 import org.apache.log4j.Logger;
 import org.apache.commons.cli.*;
 
@@ -32,7 +34,7 @@ public class ScrapperTool {
 		
 		try{
 			scrapperimpl= ScrapperImpl.getInstance();
-			configDirectoryfile = new File(configDirectory);
+			configDirectoryfile = new File(ConfigData.configDirectory);
 			scrapperimpl.initialize(configDirectoryfile);
 			Producer.initialize(configDirectoryfile);	
 		} 
@@ -78,7 +80,7 @@ public class ScrapperTool {
 					startThread(entry.getKey());
 				}
 				NotificationConsumerGroup newgroup;
-				newgroup = new NotificationConsumerGroup(5, topicname,configDirectoryfile);
+				newgroup = new NotificationConsumerGroup(5, ConfigData.topicName,configDirectoryfile);
 				newgroup.execute();
 				//checkThreadsStatus();
 		} catch (Exception e) {
@@ -114,8 +116,10 @@ public class ScrapperTool {
             return;
         }
 
-        configDirectory = cmd.getOptionValue("configDirectory");
-        topicname = cmd.getOptionValue("topicname");
+        ConfigData.configDirectory=cmd.getOptionValue("configDirectory");
+        ConfigData.topicName=cmd.getOptionValue("topicname");
+        //configDirectory = cmd.getOptionValue("configDirectory");
+        //topicname = cmd.getOptionValue("topicname");
         
 		ScrapperTool.startScrappers();
 	}
