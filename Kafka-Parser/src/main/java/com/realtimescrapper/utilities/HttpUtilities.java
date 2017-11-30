@@ -26,22 +26,19 @@ public class HttpUtilities {
 	private static String User_Agent="Mozilla/5.0";
 	private static List<String> userAgents;
 	private static Random rand;
-	/**  
+	
 	  static
 	  {
 		  rand=new Random();
 		  try {
-			userAgents = Files.readAllLines(Paths.get(Resources.getResource("useragents-list.txt").toURI()),
+			userAgents = Files.readAllLines(Paths.get(ConfigData.configDirectory,ConfigData.useragents_listPropertiesFileName),
 			          Charset.defaultCharset());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} 
 	  }
-	  **/
+	  
 
 	
 	
@@ -72,8 +69,8 @@ public class HttpUtilities {
 				URL obj = new URL(url);
 				HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 				con.setRequestMethod("GET");
-				//con.setRequestProperty("User-Agent", userAgents.get(rand.nextInt(userAgents.size())));
-				con.setRequestProperty("User-Agent", User_Agent);
+				con.setRequestProperty("User-Agent", userAgents.get(rand.nextInt(userAgents.size())));
+				//con.setRequestProperty("User-Agent", User_Agent);
 				BufferedReader in = new BufferedReader(
 				        new InputStreamReader(con.getInputStream()));
 				String inputLine;
