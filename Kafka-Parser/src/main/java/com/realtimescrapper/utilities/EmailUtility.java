@@ -1,7 +1,10 @@
 package com.realtimescrapper.utilities;
 
+import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Set;
@@ -25,9 +28,10 @@ public class EmailUtility {
 	final static Logger logger = Logger.getLogger(EmailUtility.class);
 	
 	static{
-		 try (InputStream props = Resources.getResource("Extra.props").openStream()) {
+		 try {
 	            properties = new Properties();
-	            properties.load(props);
+	            File configDirectory =  new File(ConfigData.configDirectory);
+	            properties.load(new ByteArrayInputStream(Files.readAllBytes(new File(configDirectory, ConfigData.emailPropertiesFileName).toPath())));
 	            
 			 } catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -47,22 +51,22 @@ public class EmailUtility {
 	public static void sendEmailUsingGmail(String botName,Set<String> alertSet,String termfound )
 	{
 		System.out.println("Search term has been found in "+botName+" terms is "+termfound);
-//		try {
-//
-//			Message message = new MimeMessage(session);
-//			message.setFrom(new InternetAddress(properties.getProperty("from-email")));
-//			message.setRecipients(Message.RecipientType.TO,
-//				InternetAddress.parse(properties.getProperty("to-email")));
-//			message.setSubject(botName+":Alert");
-//			message.setText("Dear Team,"
-//				+ "\n\n Terms:"+termfound
-//				+"\n\n In the below URLs"
-//				+"\n\n"+Joiner.on(",").join(alertSet));
-//			Transport.send(message);
-//
-//		} catch (MessagingException e) {
-//			logger.error("Some issue with sending email:",e);
-//		}
+		try {
+
+			Message message = new MimeMessage(session);
+			message.setFrom(new InternetAddress(properties.getProperty("from-email")));
+			message.setRecipients(Message.RecipientType.TO,
+				InternetAddress.parse(properties.getProperty("to-email")));
+			message.setSubject(botName+":Alert");
+			message.setText("Dear Team,"
+				+ "\n\n Terms:"+termfound
+				+"\n\n In the below URLs"
+				+"\n\n"+Joiner.on(",").join(alertSet));
+			Transport.send(message);
+
+		} catch (MessagingException e) {
+			logger.error("Some issue with sending email:",e);
+		}
 	}
 	
 	public static void sendEmailUsingGmail(String botName,String url,ArrayList<String> termsfound )

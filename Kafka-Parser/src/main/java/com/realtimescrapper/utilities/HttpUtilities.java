@@ -24,10 +24,9 @@ import com.google.common.io.Resources;
 public class HttpUtilities {
 	
 	private static String User_Agent="Mozilla/5.0";
-	private Scanner scanner;
 	private static List<String> userAgents;
 	private static Random rand;
-	  
+	/**  
 	  static
 	  {
 		  rand=new Random();
@@ -42,7 +41,7 @@ public class HttpUtilities {
 			e.printStackTrace();
 		}
 	  }
-	  
+	  **/
 
 	
 	
@@ -73,7 +72,8 @@ public class HttpUtilities {
 				URL obj = new URL(url);
 				HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 				con.setRequestMethod("GET");
-				con.setRequestProperty("User-Agent", userAgents.get(rand.nextInt(userAgents.size())));
+				//con.setRequestProperty("User-Agent", userAgents.get(rand.nextInt(userAgents.size())));
+				con.setRequestProperty("User-Agent", User_Agent);
 				BufferedReader in = new BufferedReader(
 				        new InputStreamReader(con.getInputStream()));
 				String inputLine;
