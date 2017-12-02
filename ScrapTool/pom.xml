@@ -1,20 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-
-  <groupId>ScrapTool</groupId>
-  <artifactId>ScrapTool</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
-  <name>ScrapTool</name>
+  <parent>
+    <groupId>com.rts.scrap</groupId>
+    <artifactId>rts</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.rts.scrap</groupId>
+  <artifactId>scraptool</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>scraptool</name>
   <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
-<dependencies>
+  <dependencies>
     	<dependency>
 		<groupId>log4j</groupId>
 		<artifactId>log4j</artifactId>
@@ -31,9 +32,9 @@
         <version>18.0</version>
      </dependency>
      <dependency>
-       <groupId>com.realtimescrapperpastie.impl</groupId>
-	  <artifactId>realtimescrapperpastie</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
+          <groupId>com.rts.scrap</groupId>
+		  <artifactId>rts-impl</artifactId>
+		  <version>1.0-SNAPSHOT</version>
      </dependency>
       <dependency>
       <groupId>junit</groupId>
@@ -88,7 +89,7 @@
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
-                                        <Main-Class>com.rt.scrapper.ScrapperTool</Main-Class>
+                                        <Main-Class>org.scraptool.ScrapperTool</Main-Class>
                                         <Build-Revision>1.0</Build-Revision>
                                         <Trusted-Library>true</Trusted-Library>
                                     </manifestEntries>
