@@ -17,7 +17,7 @@ Install JDK
 Start the zookeeper and Kafka Server (Refer https://kafka.apache.org/documentation/#quickstart for more information)    
 Create a kafka topic   
 Navigate to scraptool/tartget  
-Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t <Kafka Topic name> -c <complete path of config directory>"     
+Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t "Kafka Topic name" -c "complete path of config directory""     
 
 
 Some more tweaking and testing is needed before this code is ready for prod.
