@@ -11,7 +11,7 @@ Before to use this tool is is neccessary to understand the properties file prese
   <li>producer.properties: Holds all the neccessary config data needed for Producer (Refer apache Kafka guide for more information).</li>  
   <li>email.properties: Configure SMTP server with email id's.</li>  
   <li>scanner-configuration.properties: This is the core configuration file. Update all the data of twitter for enabling search on twitter/github(To get tokens and key refer respective sites). For   pastie/github and reddit there is no need for any changes in config.</li>  
-  However in all cases make sure to change "searchterms" to values of our choice to search. If there are multiple search terms then add them seperate by comma as shown with example terms in config file.  
+  However in all cases make sure to change "searchterms" to values of our choice to search. If there are multiple search terms then add them seperate by comma as shown with example terms in config file.
 
 
 <h3>How to use the tool</h3> 
@@ -26,7 +26,7 @@ Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t "Kafka Topic
 
 Some more tweaking and testing is needed before this code is ready for prod.
 
-Contributors :
+<h3>Contributors</h3>
 
   Naveen Rudrappa                                                                                                                        
   Padma Shivakumar
