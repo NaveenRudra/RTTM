@@ -1,7 +1,9 @@
+<h2>Description</h2>
 RTS (Realtime scrapper) is a tool developed to scrap all pasties,github,reddit..etc in real time to identify occurrence of search terms configured. Upon match an email will be triggered. Thus allowing company to react in case of leakage of code, any hacks tweeted..etc.. and harden themselves against an attack before it goes viral.
 
 The same tool in malicious user hands can be used offensively to get update on any latest hacks, code leakage etc..
 
+<h3>Configuration</h3>
 Before to use this tool is is neccessary to understand the properties file present in scrapper_config directory.  
 
   consumer.properties: Holds all the neccessary config data needed for consumer (Refer apache Kafka guide for more information).  
@@ -12,8 +14,7 @@ Before to use this tool is is neccessary to understand the properties file prese
   them seperate by comma as shown with example terms in config file.  
 
 
-<h3>How to use the tool</h3>:  
-
+<h3>How to use the tool</h3> 
 Install JDK
 INstall mvn and set the path
 Start the zookeeper and Kafka Server (Refer https://kafka.apache.org/documentation/#quickstart for more information)    
