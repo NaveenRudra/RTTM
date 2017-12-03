@@ -18,18 +18,18 @@ However in all cases make sure to change "searchterms" to values of our choice t
 
 
 <h3>How to use the tool</h3> 
-Install JDK
-Install mvn and set the path
-Start the zookeeper and Kafka Server (Refer https://kafka.apache.org/documentation/#quickstart for more information)    
-Create a kafka topic 
-Navigate to main folder. Run command "mvn clean install -DskipTests". This willbuild the code.
-Navigate to scraptool/tartget  
-Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t "Kafka Topic name" -c "complete path of config directory""     
-
-
-Some more tweaking and testing is needed before this code is ready for prod.
+<ul>
+<li>Install JDK</li> 
+<li>Install mvn and set the path</li> 
+<li>Start the zookeeper and Kafka Server (Refer https://kafka.apache.org/documentation/#quickstart for more information) </li>    
+<li>Create a kafka topic </li> 
+<li>Navigate to main folder. Run command "mvn clean install -DskipTests". This willbuild the code.</li> 
+<li>Navigate to scraptool/tartget  </li> 
+<li>Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t "Kafka Topic name" -c "complete path of config directory"" </li>   
+</ul>
 
 <h3>Contributors</h3>
-
-  Naveen Rudrappa                                                                                                                        
-  Padma Shivakumar
+<ul>
+<li>Naveen Rudrappa </li>                                                                                                              
+<li>Padma Shivakumar</li> 
+</ul>
