@@ -13,9 +13,11 @@ Before to use this tool is is neccessary to understand the properties file prese
 
 How to use the tool:  
 
-Install JDK     
+Install JDK
+INstall mvn and set the path
 Start the zookeeper and Kafka Server (Refer https://kafka.apache.org/documentation/#quickstart for more information)    
-Create a kafka topic   
+Create a kafka topic 
+Navigate to main folder. Run command "mvn clean install -DskipTests". This willbuild the code.
 Navigate to scraptool/tartget  
 Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t "Kafka Topic name" -c "complete path of config directory""     
 
