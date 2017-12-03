@@ -1,6 +1,0 @@
-org\rts\base\exceptions\ScrapperNotvalidException.class
-org\rts\base\profileregistry\ScrapperProfileRegistry.class
-org\rts\base\utilities\PropertyUtilities.class
-org\rts\base\Scrapper.class
-org\rts\base\ScrapperProfile.class
-org\rts\base\ScrapperImpl.class
