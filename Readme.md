@@ -5,13 +5,12 @@ The same tool in malicious user hands can be used offensively to get update on a
 
 <h3>Configuration</h3>
 Before to use this tool is is neccessary to understand the properties file present in scrapper_config directory.  
-
-  consumer.properties: Holds all the neccessary config data needed for consumer (Refer apache Kafka guide for more information).  
-  producer.properties: Holds all the neccessary config data needed for Producer (Refer apache Kafka guide for more information).  
-  email.properties: Configure SMTP server with email id's.  
-  scanner-configuration.properties: This is the core configuration file. Update all the data of twitter for enabling search on twitter/github(To get tokens and key refer respective sites). For   pastie/github and reddit there is no need for any changes in config.  
-  However in all cases make sure to change "searchterms" to values of our choice to search. If there are multiple search terms then add  
-  them seperate by comma as shown with example terms in config file.  
+<ul>
+  <li>consumer.properties: Holds all the neccessary config data needed for consumer (Refer apache Kafka guide for more information).<li>  
+  <li>producer.properties: Holds all the neccessary config data needed for Producer (Refer apache Kafka guide for more information).<li>  
+  <li>email.properties: Configure SMTP server with email id's.<li>  
+  <li>scanner-configuration.properties: This is the core configuration file. Update all the data of twitter for enabling search on twitter/github(To get tokens and key refer respective sites). For   pastie/github and reddit there is no need for any changes in config.<li>  
+  However in all cases make sure to change "searchterms" to values of our choice to search. If there are multiple search terms then add them seperate by comma as shown with example terms in config file.  
 
 
 <h3>How to use the tool</h3> 
