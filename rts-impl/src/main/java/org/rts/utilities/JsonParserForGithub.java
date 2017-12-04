@@ -51,7 +51,7 @@ public class JsonParserForGithub {
 	public static void main(String args []) throws InterruptedException
 	{
 		try {
-			JsonParserForGithub.githubUrlFetcher("https://api.github.com/search/code?q=olacabs&sort=indexed&order=asc&access_token=ac2536a0beb59624d879e10084fe2d04404451bf&");
+			JsonParserForGithub.githubUrlFetcher("https://api.github.com/search/code?q=testing&sort=indexed&order=asc&access_token=ac2536a0beb59624d879e10084fe2d04404451bf&");
 			//JsonParser.githubUrlFetcher("https://pastebin.com/archive");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
