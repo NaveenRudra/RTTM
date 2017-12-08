@@ -20,13 +20,13 @@ public class PastieParseAndSearch {
 	public static ArrayList<String> fetchids(String archiveUrl,String regex) throws IOException, InterruptedException
 	{
 		//ConfigParams.initialzie();
-		System.out.println(archiveUrl);
-		System.out.println(HttpUtilities.sendGet(archiveUrl));
+		//System.out.println(archiveUrl);
+		//System.out.println(HttpUtilities.sendGet(archiveUrl));
 		ArrayList<String> ids= Search.extractRegexMatches(HttpUtilities.sendGet(archiveUrl), regex);
-		for (String each:ids)
+		/**for (String each:ids)
 		{
 			System.out.println(each);
-		}
+		}**/
 		return ids;
 	}
 	
