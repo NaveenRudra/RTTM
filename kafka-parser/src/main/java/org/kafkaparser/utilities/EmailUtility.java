@@ -59,9 +59,10 @@ public class EmailUtility {
 				InternetAddress.parse(properties.getProperty("to-email")));
 			message.setSubject(botName+":Alert");
 			message.setText("Dear Team,"
-				+ "\n\n Terms:"+termfound
-				+"\n\n In the below URLs"
-				+"\n\n"+Joiner.on(",").join(alertSet));
+				+ "\n\n "+botName+"Bot has been Triggered."
+				+ "\n\n Terms found:"+termfound
+				+"\n\n List of URLs"
+				+"\n\n"+Joiner.on("\n").join(alertSet));
 			Transport.send(message);
 
 		} catch (MessagingException e) {

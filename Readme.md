@@ -3,6 +3,24 @@ RTS (Realtime scrapper) is a tool developed to scrap all pasties,github,reddit..
 
 The same tool in malicious user hands can be used offensively to get update on any latest hacks, code leakage etc..
 
+List of sites which wil be monitored are:
+<ul>
+<li>twitter</li>
+<li>pastebin.com</li>
+<li>reddit</li>
+<li>github</li>
+<li>codepad.org</li>
+<li>lpaste.net</li>
+<li>dumpz.org</li>
+<li>snipplr.com</li>
+<li>paste.org.ru</li>
+<li>gist.github.com</li>
+<li>pastebin.ca</li>
+<li>kpaste.net</li>
+<li>slexy.org</li>
+<li>ideone.com</li>
+<li>pastebin.fr</li>
+</ul>
 For architecture information and details of how this tool work refer documnetation folder in this repository.
 
 <h3>Configuration</h3>

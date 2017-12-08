@@ -8,3 +8,8 @@ org.rts.rtsprofile.KpastenetProfile
 org.rts.rtsprofile.PastebincaProfile
 org.rts.rtsprofile.PastebinfrProfile
 org.rts.rtsprofile.SlexyOrgProfile
+org.rts.rtsprofile.CodepadProfile
+org.rts.rtsprofile.Pasteorgru
+org.rts.rtsprofile.Lpaste
+org.rts.rtsprofile.Dumpz
+org.rts.rtsprofile.Snipplr

@@ -48,9 +48,9 @@ public class NotificationConsumerThread implements Runnable {
 				        /**System.out.println("Receive message: " + record.value() + ", Partition: "
 				            + record.partition() + ", Offset: " + record.offset() + ", by ThreadID: "
 				            + Thread.currentThread().getId());**/
-				    	  	//System.out.println("Message recieved !!*********************************************************"+record.value().getUrl());
+				    	  	System.out.println("Message recieved !!*********************************************************"+record.value().getUrl());
 				    	  	//Make sure to enable below code for sending resposne and confirming if chanegs has been done or not
-				      	    PastieParseAndSearch.searchEachid(record.value());
+				      	    //PastieParseAndSearch.searchEachid(record.value());
 				      }
 			      }
 			  }
