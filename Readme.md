@@ -41,7 +41,7 @@ However in all cases make sure to change "searchterms" to values of our choice t
 <li>Install mvn and set the path</li> 
 <li>Start the zookeeper and Kafka Server (Refer https://kafka.apache.org/documentation/#quickstart for more information) </li>    
 <li>Create a kafka topic </li> 
-<li>Navigate to main folder. Run command "mvn clean install -DskipTests". This willbuild the code.</li> 
+<li>Navigate to "rts" folder. Run command "mvn clean install -DskipTests". This willbuild the code.</li> 
 <li>Navigate to scraptool/tartget  </li> 
 <li>Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t "Kafka Topic name" -c "complete path of config directory"" </li>   
 </ul>
