@@ -7,24 +7,24 @@ List of sites which will be monitored are:
 <ul>
 <li>Non-Pastie Sites</li>
 <ul>
-<li>twitter</li>
-<li>reddit</li>
-<li>github</li>
+<li>Twitter</li>
+<li>Reddit</li>
+<li>Github</li>
 </ul>
 <li>Pastie Sites</li>
 <ul>
-<li>pastebin.com</li>
-<li>codepad.org</li>
-<li>lpaste.net</li>
-<li>dumpz.org</li>
-<li>snipplr.com</li>
-<li>paste.org.ru</li>
-<li>gist.github.com</li>
-<li>pastebin.ca</li>
-<li>kpaste.net</li>
-<li>slexy.org</li>
-<li>ideone.com</li>
-<li>pastebin.fr</li>
+<li>Pastebin.com</li>
+<li>Codepad.org</li>
+<li>Lpaste.net</li>
+<li>Dumpz.org</li>
+<li>Snipplr.com</li>
+<li>Paste.org.ru</li>
+<li>Gist.github.com</li>
+<li>Pastebin.ca</li>
+<li>Kpaste.net</li>
+<li>Slexy.org</li>
+<li>Ideone.com</li>
+<li>Pastebin.fr</li>
 </ul>
 </ul>
 For architecture information and details of how this tool work refer documnetation folder in this repository.
