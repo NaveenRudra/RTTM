@@ -1,10 +1,16 @@
 package org.rts.impl;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
-
+import org.kafkaparser.pojo.Data;
+import org.kafkaparser.utilities.DbUtil;
+import org.kafkaparser.utilities.EmailUtility;
 import org.rts.base.Scrapper;
+import org.sqlite.dataaccess.util.DaoUtil;
+
 import twitter4j.FilterQuery;
 import twitter4j.StallWarning;
 import twitter4j.Status;
@@ -13,6 +19,8 @@ import twitter4j.StatusListener;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 import twitter4j.conf.ConfigurationBuilder;
+import java.util.regex.Pattern;
+
 /**
  * Hello world!
  *
@@ -24,6 +32,7 @@ public class TwitterImpl implements Scrapper
 	private FilterQuery tweetFilterQuery = null;
 	private String[] searchTerms=null;
 	final static Logger logger = Logger.getLogger(TwitterImpl.class);
+	private HashMap<String, Pattern> keywordsMap = new HashMap<>();
 	
     public static void main( String[] args )
     {
@@ -39,7 +48,15 @@ public class TwitterImpl implements Scrapper
                 .setOAuthAccessToken(prop.getProperty("accessToken"))
                 .setOAuthAccessTokenSecret(prop.getProperty("accessTokenSecret"));
         searchTerms=prop.getProperty("searchterms").split(",");
+        if(searchTerms.length > 0) {
+            for(String keyword : searchTerms) {
+                keywordsMap.put(keyword, Pattern.compile(keyword, Pattern.CASE_INSENSITIVE));
+            }
+        }
         twitterStream = new TwitterStreamFactory(configurationBuilder.build()).getInstance();
+        
+        
+        
         twitterStream.addListener(new StatusListener () {
            
 			public void onException(Exception arg0) {
@@ -53,6 +70,20 @@ public class TwitterImpl implements Scrapper
 				// TODO Auto-generated method stub
 				
 			}
+			
+			private ArrayList<String> getKeywordsFromTweet(String tweet) {
+				ArrayList<String> result = new ArrayList<>();
+
+			    for (String keyword : keywordsMap.keySet()) {
+			        Pattern p = keywordsMap.get(keyword);
+			        if (p.matcher(tweet).find()) {
+			            result.add(keyword);
+			        }
+			    }
+
+			    return result;
+			}
+			
 
 			public void onScrubGeo(long arg0, long arg1) {
 				// TODO Auto-generated method stub
@@ -67,6 +98,19 @@ public class TwitterImpl implements Scrapper
 			public void onStatus(Status status) {
 				// TODO Auto-generated method stub
 				System.out.println(status.getText());
+				if(!status.isRetweeted())
+				{
+				System.out.println(status.getText());
+				String url= "https://twitter.com/" + status.getUser().getScreenName() 
+					    + "/status/" + status.getId();
+				
+				ArrayList<String> termsfound=getKeywordsFromTweet(status.getText());
+				if(!DaoUtil.searchDuplicateByUrl(url))
+				{
+					EmailUtility.sendEmailUsingGmail("Later", url, termsfound);
+					DbUtil.addNewEntry(termsfound, url);
+				}
+				}
 				
 			}
 

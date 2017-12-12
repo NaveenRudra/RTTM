@@ -41,7 +41,7 @@ public class JsonParserForReddit {
         	 }
         	 evictingQueue.add(redditUrl);
          }
-         return diffSet;
+         return presentSet;
      }
          
 	
@@ -51,7 +51,7 @@ public class JsonParserForReddit {
 	public static void main(String args []) throws InterruptedException
 	{
 		try {
-			JsonParserForReddit.redditUrlFetcher("https://www.reddit.com/search.json?q=olacabs%20hacked");
+			JsonParserForReddit.redditUrlFetcher("https://www.reddit.com/search.json?q=naveencheck");
 			//JsonParser.githubUrlFetcher("https://pastebin.com/archive");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block

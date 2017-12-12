@@ -3,12 +3,15 @@ package org.rts.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
 import org.rts.base.Scrapper;
+import org.kafkaparser.utilities.DbUtil;
 import org.kafkaparser.utilities.EmailUtility;
 import org.rts.utilities.JsonParserForReddit;
+import org.sqlite.dataaccess.util.DaoUtil;
 
 
 public class RedditImpl implements Scrapper{
@@ -38,17 +41,31 @@ public class RedditImpl implements Scrapper{
 			for(String searchterm:searchTerms)
 			{
 				Set<String> alertSet=JsonParserForReddit.redditUrlFetcher(baseurl.replace("{searchTerm}", searchterm));
-				Iterator<String>  i = alertSet.iterator();
-				while (i.hasNext())
-				  {
-					String name = (String) i.next();
-				    //System.out.println(name);
-				  }
-				if(!(alertSet.size()==0))
+				Set<String> filteredalertSet = new HashSet<String>(); 
+				
+				for(String url:alertSet)
 				{
-					//System.out.println("no diff found");
-					EmailUtility.sendEmailUsingGmail("Reddit", alertSet, searchterm);
+					if(!DaoUtil.searchDuplicateByUrl(url))
+					{
+						filteredalertSet.add(url);
+					}
 				}
+				if(!(filteredalertSet.size()==0))
+				{
+					//System.out.println("Reuqired terms have been found");
+					EmailUtility.sendEmailUsingGmail("Reddit", filteredalertSet, searchterm);
+					for(String url:filteredalertSet)
+					{
+						if(!DaoUtil.searchDuplicateByUrl(url))
+						{
+							ArrayList<String> temp=new ArrayList<String>();
+							temp.add(searchterm);
+							DbUtil.addNewEntry(temp, url);
+						
+					     }
+				    }
+			    }
+				
 			}
 			Thread.sleep(Integer.parseInt(timetoSleep));
 		} catch (Exception e) {

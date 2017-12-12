@@ -58,12 +58,7 @@ public class SearchThread implements Runnable{
   		   if(!DaoUtil.searchDuplicateByUrl(data.getUrl()))
 			{
 				EmailUtility.sendEmailUsingGmail("Later", data.getUrl(), termsFound);
-				Result result = new Result();
-				result.setSearchedTerms(termsFound);
-	     		result.setSearchedtext("This is for future implementation");
-				result.setUrl(data.getUrl());
-				result.setTime(df.format(dateobj).toString());
-				DaoUtil.insert(result);
+				DbUtil.addNewEntry(termsFound, data);
 			}
   		   
 		}

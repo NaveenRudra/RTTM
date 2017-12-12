@@ -26,6 +26,15 @@ public class Result implements Serializable {
 	private String time;
 	private String searchedtext;
 	private ArrayList<String> searchedTerms;
+	public String getBotName() {
+		return botName;
+	}
+
+	public void setBotName(String botName) {
+		this.botName = botName;
+	}
+
+	private String botName;
 	
 	//add one extra column from future perspective
 	//add one extra column if it is false or true

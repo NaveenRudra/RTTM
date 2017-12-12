@@ -2,12 +2,15 @@ package org.rts.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Properties;
 import java.util.Set;
 import org.apache.log4j.Logger;
 import org.rts.base.Scrapper;
+import org.kafkaparser.utilities.DbUtil;
 import org.kafkaparser.utilities.EmailUtility;
 import org.rts.utilities.JsonParserForGithub;
+import org.sqlite.dataaccess.util.DaoUtil;
 
 public class GithubImpl implements Scrapper {
 
@@ -39,11 +42,30 @@ public class GithubImpl implements Scrapper {
 				for(String searchterm:searchTerms)
 				{
 					Set<String> alertSet=JsonParserForGithub.githubUrlFetcher(baseurl.replace("{searchTerm}", searchterm)+"&access_token="+access_token);
-					if(!(alertSet.size()==0))
+					Set<String> filteredalertSet = new HashSet<String>(); 
+					
+					for(String url:alertSet)
+					{
+						if(!DaoUtil.searchDuplicateByUrl(url))
+						{
+							filteredalertSet.add(url);
+						}
+					}
+					if(!(filteredalertSet.size()==0))
 					{
 						//System.out.println("Reuqired terms have been found");
-						EmailUtility.sendEmailUsingGmail("Github", alertSet, searchterm);
-					}
+						EmailUtility.sendEmailUsingGmail("Github", filteredalertSet, searchterm);
+						for(String url:filteredalertSet)
+						{
+							if(!DaoUtil.searchDuplicateByUrl(url))
+							{
+								ArrayList<String> temp=new ArrayList<String>();
+								temp.add(searchterm);
+								DbUtil.addNewEntry(temp, url);
+							
+						     }
+					    }
+				    }
 				}
 				Thread.sleep(Integer.parseInt(timetoSleep));
 			} catch (Exception e) {
