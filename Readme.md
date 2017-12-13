@@ -42,12 +42,12 @@ Understanding more about scanner-configuration.properties file.
 <ul>
 For any pastie site configuration is as below:
 <ul>
-<li>scrapper.(pastie name).profile=<Pastie profile name></li>
-<li>scrapper.<pastie name>.homeurl=<URL from where pastie ids a extracted></li>
-<li>scrapper.<pastie name>.regex=<Regex to fetch pastie ids></li>
-<li>scrapper.<pastie name>.downloadurl= <URL to get information about each apstie></li>
-<li>scrapper.<pastie name>.searchterms=<Mention terms to be searched seperated by comma></li>
-<li>scrapper.<pastie name>.timetosleep=<Time for which pastie thread will sleep before fetching pastie ids again></li>
+<li>scrapper.(pastie name).profile=(Pastie profile name)</li>
+<li>scrapper.(pastie name).homeurl=(URL from where pastie ids a extracted)</li>
+<li>scrapper.(pastie name).regex=(Regex to fetch pastie ids)</li>
+<li>scrapper.(pastie name).downloadurl= (URL to get information about each apstie)</li>
+<li>scrapper.(pastie name).searchterms=(Mention terms to be searched seperated by comma)</li>
+<li>scrapper.(pastie name).timetosleep=(Time for which pastie thread will sleep before fetching pastie ids again)</li>
 </ul>
 </ul>
 <ul>
@@ -55,9 +55,9 @@ For gituhb search configureation is as below:
 <ul>
 <li>scrapper.github.profile=Github</li>
 <li>scrapper.github.baseurl=https://api.github.com/search/code?q={searchTerm}&sort=indexed&order=asc</li>
-<li>scrapper.github.access_token=<Get your own github access token></li>
-<li>scrapper.github.searchterms=<Mention terms to be searched seperated by comma></li>
-<li>scrapper.github.timetosleep=<Time for which github thred should sleep before searching again></li>
+<li>scrapper.github.access_token=<(et your own github access token)</li>
+<li>scrapper.github.searchterms=(Mention terms to be searched seperated by comma)</li>
+<li>scrapper.github.timetosleep=(Time for which github thred should sleep before searching again)</li>
 </ul>
 </ul>
 
@@ -66,8 +66,8 @@ For reditt search configureation is as below:
 <ul>
 <li>scrapper.reddit.profile=Reddit</li>
 <li>scrapper.reddit.baseurl=https://www.reddit.com/search.json?q={searchterm}</li>
-<li>scrapper.reddit.searchterms=<Mention terms to be searched seperated by comma></li>
-<li>scrapper.reddit.timetosleep=<Time for which github thred should sleep before searching again></li>
+<li>scrapper.reddit.searchterms=(Mention terms to be searched seperated by comma)</li>
+<li>scrapper.reddit.timetosleep=(Time for which github thred should sleep before searching again)</li>
 </ul>
 </ul>
 </ul>
