@@ -99,7 +99,7 @@ For Twitter search configuration is as below:
 </ul>
 <ul>
 
-[![RTS video](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "RTS video")
+[![RTS video](https://test.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube1.com/watch?v=StTqXEQ2l-Y "RTS video")
 
 
 <h3>Contributors</h3>
