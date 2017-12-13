@@ -15,7 +15,6 @@ List of sites which will be monitored are:
 <ul>
 <li>Pastebin.com</li>
 <li>Codepad.org</li>
-<li>Lpaste.net</li>
 <li>Dumpz.org</li>
 <li>Snipplr.com</li>
 <li>Paste.org.ru</li>
