@@ -97,9 +97,10 @@ For Twitter search configuration is as below:
 <li>Navigate to scraptool/tartget  </li> 
 <li>Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t "Kafka Topic name" -c "complete path of config directory"" </li>   
 </ul>
-
+<ul>
 Will be creating and video soon:
-[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
+</ul>
+[![RTS video](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "RTS video")
 
 
 <h3>Contributors</h3>
