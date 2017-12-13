@@ -80,8 +80,8 @@ public class EmailUtility {
 				InternetAddress.parse(properties.getProperty("to-email")));
 			message.setSubject(botName+":Alert");
 			message.setText("Dear Team,"
-				+ "\n\n Terms:"+Joiner.on(",").join(termsfound)
-				+"\n\n In the below URL"
+				+ "\n\n Terms found are:"+Joiner.on(",").join(termsfound)
+				+"\n\n Refer below listed URL's for more information:"
 				+"\n\n"+url);
 			Transport.send(message);
 
