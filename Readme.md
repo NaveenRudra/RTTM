@@ -38,9 +38,10 @@ Before using this tool is is neccessary to understand the properties file presen
 <li>email.properties: Configure SMTP server with email id's.</li>  
 <li>scanner-configuration.properties: This is the core configuration file. Update all the data of twitter for enabling search on twitter/github(To get tokens and key refer respective sites). For  pastie sites and reddit there is no need for any changes in config.</li>  
 <ul>
-<h4>Understanding more about scanner-configuration.properties file.</h4>
+Understanding more about scanner-configuration.properties file.
 <ul>
 For any pastie site configuration is as below:
+<ul>
 <li>scrapper.<pastie name>.profile=<Pastie profile name></li>
 <li>scrapper.<pastie name>.homeurl=<URL from where pastie ids a extracted></li>
 <li>scrapper.<pastie name>.regex=<Regex to fetch pastie ids></li>
@@ -48,21 +49,26 @@ For any pastie site configuration is as below:
 <li>scrapper.<pastie name>.searchterms=<Mention terms to be searched seperated by comma></li>
 <li>scrapper.<pastie name>.timetosleep=<Time for which pastie thread will sleep before fetching pastie ids again></li>
 </ul>
+</ul>
 <ul>
 For gituhb search configureation is as below:
+<ul>
 <li>scrapper.github.profile=Github</li>
 <li>scrapper.github.baseurl=https://api.github.com/search/code?q={searchTerm}&sort=indexed&order=asc</li>
 <li>scrapper.github.access_token=<Get your own github access token></li>
 <li>scrapper.github.searchterms=<Mention terms to be searched seperated by comma></li>
 <li>scrapper.github.timetosleep=<Time for which github thred should sleep before searching again></li>
 </ul>
+</ul>
 
 <ul>
 For reditt search configureation is as below:
+<ul>
 <li>scrapper.reddit.profile=Reddit</li>
 <li>scrapper.reddit.baseurl=https://www.reddit.com/search.json?q={searchterm}</li>
 <li>scrapper.reddit.searchterms=<Mention terms to be searched seperated by comma></li>
 <li>scrapper.reddit.timetosleep=<Time for which github thred should sleep before searching again></li>
+</ul>
 </ul>
 </ul>
 However in all cases make sure to change "searchterms" to values of our choice to search. If there are multiple search terms then add them seperate by comma as shown with example terms in config file.
