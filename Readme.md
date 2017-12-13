@@ -42,7 +42,7 @@ Understanding more about scanner-configuration.properties file.
 <ul>
 For any pastie site configuration is as below:
 <ul>
-<li>scrapper.<pastie name>.profile=<Pastie profile name></li>
+<li>scrapper.(pastie name).profile=<Pastie profile name></li>
 <li>scrapper.<pastie name>.homeurl=<URL from where pastie ids a extracted></li>
 <li>scrapper.<pastie name>.regex=<Regex to fetch pastie ids></li>
 <li>scrapper.<pastie name>.downloadurl= <URL to get information about each apstie></li>
