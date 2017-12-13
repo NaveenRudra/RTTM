@@ -38,7 +38,6 @@ Before using this tool is is neccessary to understand the properties file presen
 <li>email.properties: Configure SMTP server with email id's.</li>  
 <li>scanner-configuration.properties: This is the core configuration file. Update all the data of twitter for enabling search on twitter/github(To get tokens and key refer respective sites). For  pastie sites and reddit there is no need for any changes in config.</li>  
 <ul>
-<br></br>
 Understanding more about scanner-configuration.properties file.
 <ul>
 For any pastie site configuration is as below:
@@ -52,7 +51,7 @@ For any pastie site configuration is as below:
 </ul>
 </ul>
 <ul>
-For gituhb search configuration is as below:
+For github search configuration is as below:
 <ul>
 <li>scrapper.github.profile=Github</li>
 <li>scrapper.github.baseurl=https://api.github.com/search/code?q={searchTerm}&sort=indexed&order=asc</li>
