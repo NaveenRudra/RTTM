@@ -98,7 +98,7 @@ For Twitter search configuration is as below:
 <li>Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t "Kafka Topic name" -c "complete path of config directory"" </li>   
 </ul>
 
-
+Will be creating and video soon:
 [![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 
 
