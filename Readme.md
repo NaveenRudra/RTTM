@@ -56,7 +56,7 @@ For gituhb search configuration is as below:
 <ul>
 <li>scrapper.github.profile=Github</li>
 <li>scrapper.github.baseurl=https://api.github.com/search/code?q={searchTerm}&sort=indexed&order=asc</li>
-<li>scrapper.github.access_token=<(Get your own github access token)</li>
+<li>scrapper.github.access_token=(Get your own github access token)</li>
 <li>scrapper.github.searchterms=(Mention terms to be searched seperated by comma)</li>
 <li>scrapper.github.timetosleep=(Time for which github thred should sleep before searching again)</li>
 </ul>
