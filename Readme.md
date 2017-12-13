@@ -36,7 +36,8 @@ Before using this tool is is neccessary to understand the properties file presen
 <li>consumer.properties: Holds all the neccessary config data needed for consumer (Refer apache Kafka guide for more information). The values present here are default options and does nto require any changes</li>  
 <li>producer.properties: Holds all the neccessary config data needed for Producer (Refer apache Kafka guide for more information).The values present here are default options and does nto require any changes</li>  
 <li>email.properties: Configure SMTP server with email id's.</li>  
-<li>scanner-configuration.properties: This is the core configuration file. Update all the data of twitter for enabling search on twitter/github(To get tokens and key refer respective sites). For  pastie sites and reddit there is no need for any changes in config.</li>  
+<li>scanner-configuration.properties: This is the core configuration file. Update all the config for enabling search on twitter/github(To get tokens and key refer respective sites). For  pastie sites and reddit there is no need for any changes in config.</li>  
+Note:However in all cases make sure to change "searchterms" to values of our choice to search. If there are multiple search terms then add them seperate by comma as shown with example terms in config file.
 <ul>
 Understanding more about scanner-configuration.properties file.
 <ul>
@@ -85,7 +86,6 @@ For Twitter search configuration is as below:
 </ul>
 
 </ul>
-However in all cases make sure to change "searchterms" to values of our choice to search. If there are multiple search terms then add them seperate by comma as shown with example terms in config file.
 </ul>
 
 <h3>How to use the tool</h3> 
