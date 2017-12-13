@@ -51,18 +51,18 @@ For any pastie site configuration is as below:
 </ul>
 </ul>
 <ul>
-For gituhb search configureation is as below:
+For gituhb search configuration is as below:
 <ul>
 <li>scrapper.github.profile=Github</li>
 <li>scrapper.github.baseurl=https://api.github.com/search/code?q={searchTerm}&sort=indexed&order=asc</li>
-<li>scrapper.github.access_token=<(et your own github access token)</li>
+<li>scrapper.github.access_token=<(Get your own github access token)</li>
 <li>scrapper.github.searchterms=(Mention terms to be searched seperated by comma)</li>
 <li>scrapper.github.timetosleep=(Time for which github thred should sleep before searching again)</li>
 </ul>
 </ul>
 
 <ul>
-For reditt search configureation is as below:
+For reditt search configuration is as below:
 <ul>
 <li>scrapper.reddit.profile=Reddit</li>
 <li>scrapper.reddit.baseurl=https://www.reddit.com/search.json?q={searchterm}</li>
@@ -70,6 +70,20 @@ For reditt search configureation is as below:
 <li>scrapper.reddit.timetosleep=(Time for which github thred should sleep before searching again)</li>
 </ul>
 </ul>
+
+<ul>
+For Twitter search configuration is as below:
+<ul>
+<li>scrapper.twitter.apikey=test</li>
+<li>scrapper.twitter.profile=Twitter</li>
+<li>scrapper.twitter.searchterms=(Mention terms to be searched seperated by comma)</li>
+<li>scrapper.twitter.consumerKey=(Get your own consumer key)</li>
+<li>scrapper.twitter.consumerSecret=(Get your own consumerSecret)</li>
+<li>scrapper.twitter.accessToken=(Get your own accessToken)</li>
+<li>scrapper.twitter.accessTokenSecret=(Get your own accessTokenSecret)</li>
+</ul>
+</ul>
+
 </ul>
 However in all cases make sure to change "searchterms" to values of our choice to search. If there are multiple search terms then add them seperate by comma as shown with example terms in config file.
 </ul>
