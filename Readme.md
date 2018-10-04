@@ -94,15 +94,22 @@ For Twitter search configuration is as below:
 <li>Install mvn and set the path</li> 
 <li>Start the zookeeper and Kafka Server (Refer https://kafka.apache.org/documentation/#quickstart for more information) </li>
 <ul>
+<li>
 Commands needed to start kafka in windows:
+<ul>
 <li>zooper-server-start.bat ../../config/consumer.properties</li>
 <li>kafka-server-start.bat ../../config/server.properties</li>
 <li>kafka-topics.bat --create --zookeeper localhost:2181  --replication-factor 1 --partitions 1 --topic "Kafka Topic name"</li>
-
+</ul>
+</li>
+<li>
+<ul>
 Commands needed to start kafka in linux:
 <li>zooper-server-start.sh ../config/consumer.properties
 <li>kafka-server-start.sh ../config/server.properties
 <li>kafka-topics.bat --create --zookeeper localhost:2181  --replication-factor 1 --partitions 1 --topic "Kafka Topic name"
+</ul>
+</li>
 
 </ul>    
 <li>Create a kafka topic </li> 
