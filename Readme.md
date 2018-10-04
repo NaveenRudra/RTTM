@@ -103,8 +103,8 @@ Commands needed to start kafka in windows:
 </ul>
 </li>
 <li>
-<ul>
 Commands needed to start kafka in linux:
+<ul>
 <li>zooper-server-start.sh ../config/consumer.properties
 <li>kafka-server-start.sh ../config/server.properties
 <li>kafka-topics.bat --create --zookeeper localhost:2181  --replication-factor 1 --partitions 1 --topic "Kafka Topic name"
