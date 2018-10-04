@@ -4,21 +4,33 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringWriter;
+import java.io.Writer;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
+import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
 import org.apache.log4j.Logger;
 import com.google.common.base.Joiner;
 import com.google.common.io.Resources;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
 
 
 public class EmailUtility {
@@ -26,11 +38,13 @@ public class EmailUtility {
 	static Properties properties;
 	static Session session;
 	final static Logger logger = Logger.getLogger(EmailUtility.class);
+	final String emailTemplate="";
 	
 	static{
 		 try {
 	            properties = new Properties();
-	            File configDirectory =  new File(ConfigData.configDirectory);
+	            //File configDirectory =  new File(ConfigData.configDirectory);
+	            File configDirectory =  new File("C:/scrapper");
 	            properties.load(new ByteArrayInputStream(Files.readAllBytes(new File(configDirectory, ConfigData.emailPropertiesFileName).toPath())));
 	            
 			 } catch (IOException e) {
@@ -53,39 +67,82 @@ public class EmailUtility {
 		System.out.println("Search term has been found in "+botName+" terms is "+termfound);
 		try {
 
-			Message message = new MimeMessage(session);
+			//configurng free marjer to send message using email template
+			// freemarker stuff.
+            Configuration cfg = new Configuration();
+            Template template = cfg.getTemplate("html-mail-template.ftl");
+            Map<String, Object> rootMap = new HashMap<String, Object>();
+            rootMap.put("botname", botName);
+            rootMap.put("termsfound", termfound);
+            rootMap.put("urls", alertSet);
+            Writer out = new StringWriter();
+            template.process(rootMap, out);
+            // freemarker stuff ends.
+            
+            Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress(properties.getProperty("from-email")));
 			message.setRecipients(Message.RecipientType.TO,
 				InternetAddress.parse(properties.getProperty("to-email")));
 			message.setSubject(botName+":Alert");
-			message.setText("Dear Team,"
-				+ "\n\n "+botName+"Bot has been Triggered."
-				+ "\n\n Terms found:"+termfound
-				+"\n\n List of URLs"
-				+"\n\n"+Joiner.on("\n").join(alertSet));
-			Transport.send(message);
+			
+            /* you can add html tags in your text to decorate it. */
+            BodyPart body = new MimeBodyPart();
+            body.setContent(out.toString(), "text/html");
+ 
+            Multipart multipart = new MimeMultipart();
+            multipart.addBodyPart(body);
+ 
+ 
+            message.setContent(multipart);
+ 
+            Transport.send(message);
+            
+			
 
-		} catch (MessagingException e) {
+
+		} catch (MessagingException | IOException | TemplateException e) {
 			logger.error("Some issue with sending email:",e);
 		}
 	}
 	
-	public static void sendEmailUsingGmail(String botName,String url,ArrayList<String> termsfound )
+	public static void sendEmailUsingGmail(String botName,Object url,ArrayList<String> termsfound )
 	{
 		try {
 
-			Message message = new MimeMessage(session);
+			//configurng free marjer to send message using email template
+			// freemarker stuff.
+            Configuration cfg = new Configuration();
+            Template template = cfg.getTemplate("html-mail-template.ftl");
+            Map<String, Object> rootMap = new HashMap<String, Object>();
+            rootMap.put("botname", botName);
+            rootMap.put("termsfound", Joiner.on(",").join(termsfound));
+            rootMap.put("urls", url);
+            Writer out = new StringWriter();
+            template.process(rootMap, out);
+            // freemarker stuff ends.
+            
+            Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress(properties.getProperty("from-email")));
 			message.setRecipients(Message.RecipientType.TO,
 				InternetAddress.parse(properties.getProperty("to-email")));
 			message.setSubject(botName+":Alert");
-			message.setText("Dear Team,"
-				+ "\n\n Terms found are:"+Joiner.on(",").join(termsfound)
-				+"\n\n Refer below listed URL's for more information:"
-				+"\n\n"+url);
-			Transport.send(message);
+			
+            /* you can add html tags in your text to decorate it. */
+            BodyPart body = new MimeBodyPart();
+            body.setContent(out.toString(), "text/html");
+ 
+            Multipart multipart = new MimeMultipart();
+            multipart.addBodyPart(body);
+ 
+ 
+            message.setContent(multipart);
+ 
+            Transport.send(message);
+            
+			
 
-		} catch (MessagingException e) {
+
+		} catch (MessagingException | IOException | TemplateException e) {
 			logger.error("Some issue with sending email:",e);
 		}
 	}
@@ -97,7 +154,8 @@ public class EmailUtility {
 		ids.add("2");
 		ids.add("3");
 		ids.add("4");
-		EmailUtility.sendEmailUsingGmail("pastebin", "http://google.com", ids);
+		String urls="jttp://google.com";
+		EmailUtility.sendEmailUsingGmail("Twitter", urls, ids);
 	}
 
 }

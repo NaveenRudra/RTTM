@@ -41,7 +41,7 @@ public class TwitterImpl implements Scrapper
 
 	public void initScrapper(Properties prop) {
 		
-		System.out.println( "Hello World!" );
+		
 		ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
         configurationBuilder.setOAuthConsumerKey(prop.getProperty("consumerKey"))
                 .setOAuthConsumerSecret(prop.getProperty("consumerSecret"))
@@ -107,7 +107,7 @@ public class TwitterImpl implements Scrapper
 				ArrayList<String> termsfound=getKeywordsFromTweet(status.getText());
 				if(!DaoUtil.searchDuplicateByUrl(url))
 				{
-					EmailUtility.sendEmailUsingGmail("Later", url, termsfound);
+					EmailUtility.sendEmailUsingGmail("Twitter", url, termsfound);
 					DbUtil.addNewEntry(termsfound, url);
 				}
 				}

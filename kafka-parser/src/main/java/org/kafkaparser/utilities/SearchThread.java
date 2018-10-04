@@ -63,7 +63,7 @@ public class SearchThread implements Runnable{
   		   
 		}
 		
-		
+		return;
 	}
 
 }

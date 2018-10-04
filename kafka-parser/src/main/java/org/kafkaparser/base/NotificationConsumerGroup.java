@@ -30,19 +30,13 @@ public final class NotificationConsumerGroup {
     }
   }
 
-  /**
-   * @return the numberOfConsumers
-   */
+
+  
   public int getNumberOfConsumers() {
     return numberOfConsumers;
   }
 
-  /**
-   * @return the groupId
-   */
-//  public String getGroupId() {
-//    return groupId;
-//  }
+
 
 
 

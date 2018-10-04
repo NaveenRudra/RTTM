@@ -80,7 +80,7 @@ public class HttpUtilities {
 					response.append(inputLine);
 				}
 				in.close();
-				con=null;
+				con.disconnect();
 				recievedResponse=true;
 				} catch (Exception e) {
 					// TODO Auto-generated catch block

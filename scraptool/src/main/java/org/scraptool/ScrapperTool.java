@@ -32,6 +32,8 @@ public class ScrapperTool {
 		//logger check for any otehr things like rate limiting 200ok issues and all
 		//logger for email too
 		
+		System.out.println( "Initializing of scrapper has started!!" );
+		logger.info("Initializing of scrapper has started!!");
 		try{
 			scrapperimpl= ScrapperImpl.getInstance();
 			configDirectoryfile = new File(ConfigData.configDirectory);

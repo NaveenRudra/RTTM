@@ -32,15 +32,16 @@ For architecture information and details of how this tool work refer documnetati
 
 Before using this tool is is neccessary to understand the properties file present in scrapper_config directory.  
 <ul>
-<li>consumer.properties: Holds all the neccessary config data needed for consumer (Refer apache Kafka guide for more information). The values present here are default options and does nto require any changes</li>  
+<li>consumer.properties: Holds all the neccessary config data needed for consumer of Kafka (Refer apache Kafka guide for more information). The values present here are default options and does nto require any changes</li>  
 <li>producer.properties: Holds all the neccessary config data needed for Producer (Refer apache Kafka guide for more information).The values present here are default options and does nto require any changes</li>  
-<li>email.properties: Configure SMTP server with email id's.</li>  
+<li>email.properties: Holds all the configuration data to send email.</li>  
 <li>scanner-configuration.properties: This is the core configuration file. Update all the config for enabling search on twitter/github(To get tokens and key refer respective sites). For  pastie sites and reddit there is no need for any changes in config.</li>  
-Note:However in all cases make sure to change "searchterms" to values of our choice to search. If there are multiple search terms then add them seperate by comma as shown with example terms in config file. </br>
+Note:However in all cases make sure to change "searchterms" to values of our choice to search. If there are multiple search terms then add them seperate by comma like the example data provided in config file. </br>
 Understanding more about scanner-configuration.properties file.
 <ul>
 <ul>
 For any pastie site configuration is as below:
+Note:leave the pastie sites configuration as is and just change the search terms as requried by the organization. Thsi will do good.
 <ul>
 <li>scrapper.(pastie name).profile=(Pastie profile name)</li>
 <li>scrapper.(pastie name).homeurl=(URL from where pastie ids a extracted)</li>
@@ -91,7 +92,19 @@ For Twitter search configuration is as below:
 <ul>
 <li>Install JDK</li> 
 <li>Install mvn and set the path</li> 
-<li>Start the zookeeper and Kafka Server (Refer https://kafka.apache.org/documentation/#quickstart for more information) </li>    
+<li>Start the zookeeper and Kafka Server (Refer https://kafka.apache.org/documentation/#quickstart for more information) </li>
+<ul>
+Commands needed to start kafka in windows:
+<li>zooper-server-start.bat ../../config/consumer.properties</li>
+<li>kafka-server-start.bat ../../config/server.properties</li>
+<li>kafka-topics.bat --create --zookeeper localhost:2181  --replication-factor 1 --partitions 1 --topic "Kafka Topic name"</li>
+
+Commands needed to start kafka in linux:
+<li>zooper-server-start.sh ../config/consumer.properties
+<li>kafka-server-start.sh ../config/server.properties
+<li>kafka-topics.bat --create --zookeeper localhost:2181  --replication-factor 1 --partitions 1 --topic "Kafka Topic name"
+
+</ul>    
 <li>Create a kafka topic </li> 
 <li>Navigate to "rts" folder. Run command "mvn clean install -DskipTests". This willbuild the code.</li> 
 <li>Navigate to scraptool/tartget  </li> 
