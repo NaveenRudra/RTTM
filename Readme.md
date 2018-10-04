@@ -118,8 +118,9 @@ Commands needed to start kafka in linux:
 <li>Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t "Kafka Topic name" -c "complete path of config directory"" </li>   
 </ul>
 
-<ul>
+
 <b>Authors:</b>
+<ul>
 <li>Naveen Rudrappa </li>                                                                                               
 <li>Padma Shivakumar</li> 
 </ul>
