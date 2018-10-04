@@ -112,13 +112,14 @@ Commands needed to start kafka in linux:
 </li>
 
 </ul>    
-<li>Create a kafka topic </li> 
+<li>Use kafka topic created in previous step </li> 
 <li>Navigate to "rts" folder. Run command "mvn clean install -DskipTests". This willbuild the code.</li> 
 <li>Navigate to scraptool/tartget  </li> 
 <li>Run the command "java -jar scraptool-1.0-SNAPSHOT-standalone.jar -t "Kafka Topic name" -c "complete path of config directory"" </li>   
 </ul>
 
 <ul>
-<li>Naveen Rudrappa </li>                                                                                                              
+<b>Authors:</b>
+<li>Naveen Rudrappa </li>                                                                                               
 <li>Padma Shivakumar</li> 
 </ul>
