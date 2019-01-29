@@ -40,7 +40,7 @@ public class RedditImpl implements Scrapper{
 		try {
 			for(String searchterm:searchTerms)
 			{
-				Set<String> alertSet=JsonParserForReddit.redditUrlFetcher(baseurl.replace("{searchTerm}", searchterm));
+				Set<String> alertSet=JsonParserForReddit.redditUrlFetcher(baseurl.replace("{searchterm}", searchterm.replace(" ", "%20")));
 				Set<String> filteredalertSet = new HashSet<String>(); 
 				
 				for(String url:alertSet)

@@ -39,6 +39,7 @@ public class ScrapperTool {
 			configDirectoryfile = new File(ConfigData.configDirectory);
 			scrapperimpl.initialize(configDirectoryfile);
 			Producer.initialize(configDirectoryfile);	
+			
 		} 
 		catch (IOException e) {
 			//logger.error("Iniltizlization of scrappers has failed", e);

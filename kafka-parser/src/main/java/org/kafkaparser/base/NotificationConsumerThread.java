@@ -50,6 +50,7 @@ public class NotificationConsumerThread implements Runnable {
 				            + Thread.currentThread().getId());**/
 				    	  	//System.out.println("Message recieved !!*********************************************************"+record.value().getUrl());
 				    	  	//Make sure to enable below code for sending resposne and confirming if chanegs has been done or not
+			    	  		Thread.sleep(200);
 				      	    PastieParseAndSearch.searchEachid(record.value());
 				      }
 			      }

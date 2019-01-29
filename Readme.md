@@ -122,5 +122,4 @@ Commands needed to start kafka in linux:
 <b>Authors:</b>
 <ul>
 <li>Naveen Rudrappa </li>                                                                                               
-<li>Padma Shivakumar</li> 
 </ul>

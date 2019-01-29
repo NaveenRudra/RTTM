@@ -43,8 +43,8 @@ public class EmailUtility {
 	static{
 		 try {
 	            properties = new Properties();
-	            //File configDirectory =  new File(ConfigData.configDirectory);
-	            File configDirectory =  new File("C:/scrapper");
+	            File configDirectory =  new File(ConfigData.configDirectory);
+	            //File configDirectory =  new File("./scrapper");
 	            properties.load(new ByteArrayInputStream(Files.readAllBytes(new File(configDirectory, ConfigData.emailPropertiesFileName).toPath())));
 	            
 			 } catch (IOException e) {
@@ -70,6 +70,8 @@ public class EmailUtility {
 			//configurng free marjer to send message using email template
 			// freemarker stuff.
             Configuration cfg = new Configuration();
+            cfg.setDirectoryForTemplateLoading(new File(
+            	    ConfigData.configDirectory));
             Template template = cfg.getTemplate("html-mail-template.ftl");
             Map<String, Object> rootMap = new HashMap<String, Object>();
             rootMap.put("botname", botName);
@@ -112,6 +114,8 @@ public class EmailUtility {
 			//configurng free marjer to send message using email template
 			// freemarker stuff.
             Configuration cfg = new Configuration();
+            cfg.setDirectoryForTemplateLoading(new File(
+            	    ConfigData.configDirectory));
             Template template = cfg.getTemplate("html-mail-template.ftl");
             Map<String, Object> rootMap = new HashMap<String, Object>();
             rootMap.put("botname", botName);

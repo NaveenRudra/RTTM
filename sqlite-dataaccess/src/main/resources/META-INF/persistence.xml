@@ -6,7 +6,7 @@
 		<properties>
 			<property name="hibernate.dialect" value="org.sqlite.dataaccess.util.SQLiteDialect"/>
 			<property name="hibernate.hbm2ddl.auto" value="create"/>
-			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.show_sql" value="false"/>
 			<property name="hibernate.format_sql" value="false"/>
 			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:RTS.db"/>

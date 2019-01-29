@@ -28,6 +28,7 @@ public class SearchThread implements Runnable{
 	
 	public void run() {
 		// TODO Auto-generated method stub
+		System.out.println("Analyzing **********-----------  "+  data.getUrl());
 		String response=null;
 		try {
 			response = HttpUtilities.sendGet(data.getUrl());
@@ -53,11 +54,11 @@ public class SearchThread implements Runnable{
 		if(termsFound.size()>0)
 		{
 			//check if multiple threads are resulting in reading same data again and again over ok
-  		    System.out.println(df.format(dateobj)+"found in **************************************************"+data.getUrl()+" data found is "+termsFound.get(0));				
+  		   // System.out.println(df.format(dateobj)+"found in **************************************************"+data.getUrl()+" data found is "+termsFound.get(0));				
 
   		   if(!DaoUtil.searchDuplicateByUrl(data.getUrl()))
 			{
-				EmailUtility.sendEmailUsingGmail("Later", data.getUrl(), termsFound);
+				EmailUtility.sendEmailUsingGmail(data.getBotName(), data.getUrl(), termsFound);
 				DbUtil.addNewEntry(termsFound, data);
 			}
   		   

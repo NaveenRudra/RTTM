@@ -12,6 +12,8 @@ import org.rts.base.Scrapper;
 import org.sqlite.dataaccess.util.DaoUtil;
 
 import twitter4j.FilterQuery;
+import twitter4j.RateLimitStatusEvent;
+import twitter4j.RateLimitStatusListener;
 import twitter4j.StallWarning;
 import twitter4j.Status;
 import twitter4j.StatusDeletionNotice;
@@ -55,12 +57,32 @@ public class TwitterImpl implements Scrapper
         }
         twitterStream = new TwitterStreamFactory(configurationBuilder.build()).getInstance();
         
-        
+        //New code for ratelimit check
+        twitterStream.addRateLimitStatusListener(new RateLimitStatusListener() {
+			
+			@Override
+			public void onRateLimitStatus(RateLimitStatusEvent event) {
+				// TODO Auto-generated method stub
+		        System.out.println("Limit["+event.getRateLimitStatus().getLimit() + "], Remaining[" +event.getRateLimitStatus().getRemaining()+"]");
+				
+			}
+			
+			@Override
+			public void onRateLimitReached(RateLimitStatusEvent event) {
+				// TODO Auto-generated method stub
+		        System.out.println("Limit["+event.getRateLimitStatus().getLimit() + "], Remaining[" +event.getRateLimitStatus().getRemaining()+"]");
+
+			}
+		});
+      //New code for ratelimit check
         
         twitterStream.addListener(new StatusListener () {
            
 			public void onException(Exception arg0) {
 				// TODO Auto-generated method stub
+				System.out.println("We have entered exception stage");
+				//This is the last resort in case if it does not actually works out how to proceed with it.
+				//Thread.sleep(10000);
 				arg0.printStackTrace();
 				
 				
@@ -97,7 +119,7 @@ public class TwitterImpl implements Scrapper
 
 			public void onStatus(Status status) {
 				// TODO Auto-generated method stub
-				System.out.println(status.getText());
+				//System.out.println(status.getText());
 				if(!status.isRetweeted())
 				{
 				System.out.println(status.getText());
@@ -117,7 +139,9 @@ public class TwitterImpl implements Scrapper
 			public void onTrackLimitationNotice(int arg0) {
 				// TODO Auto-generated method stub
 				
-			}});
+			}
+
+		});
 		
         tweetFilterQuery = new FilterQuery(); // See 
         tweetFilterQuery.track(searchTerms); // OR on keywords

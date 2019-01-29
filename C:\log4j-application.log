@@ -1,0 +1,573 @@
+2019-01-20 21:39:05 ERROR EmailUtility:106 - Some issue with sending email:
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:100)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:57)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-20 21:39:06 ERROR EmailUtility:150 - Some issue with sending email:
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-20 21:39:06 ERROR EmailUtility:150 - Some issue with sending email:
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-20 21:39:06 ERROR EmailUtility:150 - Some issue with sending email:
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-20 21:39:06 ERROR EmailUtility:150 - Some issue with sending email:
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-20 21:39:06 ERROR EmailUtility:150 - Some issue with sending email:
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-20 21:39:06 ERROR EmailUtility:150 - Some issue with sending email:
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-20 21:39:06 ERROR EmailUtility:150 - Some issue with sending email:
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-20 21:39:06 ERROR EmailUtility:150 - Some issue with sending email:
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-20 21:41:02 ERROR EmailUtility:106 - Some issue with sending email:
+javax.mail.AuthenticationFailedException
+	at javax.mail.Service.connect(Service.java:306)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:100)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:57)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:14:45 ERROR AbstractCoordinator:376 - Attempt to join group test failed due to: The session timeout is not within an acceptable range.
+2019-01-21 09:14:45 ERROR AbstractCoordinator:376 - Attempt to join group test failed due to: The session timeout is not within an acceptable range.
+2019-01-21 09:14:45 ERROR AbstractCoordinator:376 - Attempt to join group test failed due to: The session timeout is not within an acceptable range.
+2019-01-21 09:14:45 ERROR AbstractCoordinator:376 - Attempt to join group test failed due to: The session timeout is not within an acceptable range.
+2019-01-21 09:14:45 ERROR AbstractCoordinator:376 - Attempt to join group test failed due to: The session timeout is not within an acceptable range.
+2019-01-21 09:20:06 ERROR AbstractCoordinator:376 - Attempt to join group test failed due to: The session timeout is not within an acceptable range.
+2019-01-21 09:20:06 ERROR AbstractCoordinator:376 - Attempt to join group test failed due to: The session timeout is not within an acceptable range.
+2019-01-21 09:20:06 ERROR AbstractCoordinator:376 - Attempt to join group test failed due to: The session timeout is not within an acceptable range.
+2019-01-21 09:20:06 ERROR AbstractCoordinator:376 - Attempt to join group test failed due to: The session timeout is not within an acceptable range.
+2019-01-21 09:20:06 ERROR AbstractCoordinator:376 - Attempt to join group test failed due to: The session timeout is not within an acceptable range.
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). z9sm29075765pfd.99 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). m3sm22630237pfi.102 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). 12sm14296779pgt.33 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). u123sm16085428pfb.1 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). t13sm13324750pgr.42 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). 84sm26806256pfa.115 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). c23sm13511217pfi.83 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). m65sm25383808pfg.180 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). h69sm14713790pge.4 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). n186sm14231299pfn.137 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). o189sm23975446pfg.117 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). 196sm28180976pfc.77 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). i5sm16825054pfg.34 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:31 ERROR EmailUtility:150 - Some issue with sending email:
+com.sun.mail.smtp.SMTPSendFailedException: 421 4.7.0 Temporary System Problem.  Try again later (10). y1sm14827984pfe.9 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport.issueSendCommand(SMTPTransport.java:1388)
+	at com.sun.mail.smtp.SMTPTransport.data(SMTPTransport.java:1207)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:585)
+	at javax.mail.Transport.send0(Transport.java:169)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-21 09:20:33 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+javax.persistence.RollbackException: Error while committing the transaction
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:94)
+	at org.sqlite.dataaccess.util.DaoUtil.insert(DaoUtil.java:24)
+	at org.kafkaparser.utilities.DbUtil.addNewEntry(DbUtil.java:39)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:64)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: javax.persistence.PersistenceException: org.hibernate.TransactionException: commit failed
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1763)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1677)
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:82)
+	... 5 more
+Caused by: org.hibernate.TransactionException: commit failed
+	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.commit(AbstractTransactionImpl.java:187)
+	at org.hibernate.jpa.internal.TransactionImpl.commit(TransactionImpl.java:77)
+	... 5 more
+Caused by: org.hibernate.TransactionException: unable to commit against JDBC connection
+	at org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.doCommit(JdbcTransaction.java:116)
+	at org.hibernate.engine.transaction.spi.AbstractTransactionImpl.commit(AbstractTransactionImpl.java:180)
+	... 6 more
+Caused by: org.sqlite.SQLiteException: [SQLITE_BUSY]  The database file is locked (database is locked)
+	at org.sqlite.core.DB.newSQLException(DB.java:909)
+	at org.sqlite.core.DB.newSQLException(DB.java:921)
+	at org.sqlite.core.DB.throwex(DB.java:886)
+	at org.sqlite.core.DB.exec(DB.java:155)
+	at org.sqlite.jdbc3.JDBC3Connection.commit(JDBC3Connection.java:174)
+	at org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction.doCommit(JdbcTransaction.java:112)
+	... 7 more
+2019-01-27 12:38:15 ERROR EmailUtility:106 - Some issue with sending email:
+javax.mail.MessagingException: Can't send command to SMTP host;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:1420)
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:1408)
+	at com.sun.mail.smtp.SMTPTransport.ehlo(SMTPTransport.java:847)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:384)
+	at javax.mail.Service.connect(Service.java:297)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:100)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:57)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+	at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1321)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1160)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1063)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:402)
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:716)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:970)
+	at com.sun.mail.util.TraceOutputStream.write(TraceOutputStream.java:101)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:1418)
+	... 12 more
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:167)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:108)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1152)
+	... 20 more
+2019-01-27 12:48:57 ERROR EmailUtility:106 - Some issue with sending email:
+javax.mail.MessagingException: Can't send command to SMTP host;
+  nested exception is:
+	javax.net.ssl.SSLProtocolException: Operation timed out (Read failed)
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:1420)
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:1408)
+	at com.sun.mail.smtp.SMTPTransport.ehlo(SMTPTransport.java:847)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:384)
+	at javax.mail.Service.connect(Service.java:297)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:100)
+	at org.rts.impl.RedditImpl.kickOffActualWork(RedditImpl.java:56)
+	at org.rts.impl.RedditImpl.run(RedditImpl.java:26)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: javax.net.ssl.SSLProtocolException: Operation timed out (Read failed)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:126)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:264)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:259)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:137)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1152)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1063)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:402)
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:716)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:970)
+	at com.sun.mail.util.TraceOutputStream.write(TraceOutputStream.java:101)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:1418)
+	... 12 more
+Caused by: java.net.SocketException: Operation timed out (Read failed)
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:448)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:165)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:108)
+	... 21 more
+2019-01-27 15:29:21 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-27 21:45:40 ERROR EmailUtility:150 - Some issue with sending email:
+javax.mail.MessagingException: Can't send command to SMTP host;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:1420)
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:1408)
+	at com.sun.mail.smtp.SMTPTransport.ehlo(SMTPTransport.java:847)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:384)
+	at javax.mail.Service.connect(Service.java:297)
+	at javax.mail.Service.connect(Service.java:156)
+	at javax.mail.Service.connect(Service.java:105)
+	at javax.mail.Transport.send0(Transport.java:168)
+	at javax.mail.Transport.send(Transport.java:98)
+	at org.kafkaparser.utilities.EmailUtility.sendEmailUsingGmail(EmailUtility.java:144)
+	at org.kafkaparser.utilities.SearchThread.run(SearchThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+	at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1321)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1160)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1063)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:402)
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:716)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:970)
+	at com.sun.mail.util.TraceOutputStream.write(TraceOutputStream.java:101)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:1418)
+	... 11 more
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:167)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:108)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1152)
+	... 19 more
+2019-01-27 23:17:04 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-28 01:46:45 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-28 03:07:03 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-28 04:55:15 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-28 06:44:18 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-28 07:30:00 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-28 08:48:15 ERROR ConsumerCoordinator:544 - Error UNKNOWN_MEMBER_ID occurred while committing offsets for group test
+2019-01-28 08:48:15 ERROR ConsumerCoordinator:544 - Error UNKNOWN_MEMBER_ID occurred while committing offsets for group test
+2019-01-28 12:01:51 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-28 12:01:57 ERROR ConsumerCoordinator:544 - Error UNKNOWN_MEMBER_ID occurred while committing offsets for group test
+2019-01-28 12:01:57 ERROR ConsumerCoordinator:544 - Error UNKNOWN_MEMBER_ID occurred while committing offsets for group test
+2019-01-28 15:54:39 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-28 15:55:12 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-28 17:42:49 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-28 17:43:22 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-29 00:26:53 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-29 02:50:27 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2019-01-29 05:33:11 ERROR GithubImpl:72 - kickOffActualWork in GithubImpl class has thrown exception
+Unexpected character (F) at position 0.
+	at org.json.simple.parser.Yylex.yylex(Unknown Source)
+	at org.json.simple.parser.JSONParser.nextToken(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at org.rts.utilities.JsonParserForGithub.githubUrlFetcher(JsonParserForGithub.java:26)
+	at org.rts.impl.GithubImpl.kickOffActualWork(GithubImpl.java:44)
+	at org.rts.impl.GithubImpl.run(GithubImpl.java:25)
+	at java.base/java.lang.Thread.run(Thread.java:834)

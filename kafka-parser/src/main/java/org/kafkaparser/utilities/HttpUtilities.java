@@ -31,7 +31,10 @@ public class HttpUtilities {
 	  {
 		  rand=new Random();
 		  try {
-			userAgents = Files.readAllLines(Paths.get(ConfigData.configDirectory,ConfigData.useragents_listPropertiesFileName),
+			//userAgents = Files.readAllLines(Paths.get(ConfigData.configDirectory,ConfigData.useragents_listPropertiesFileName),
+			 //         Charset.defaultCharset());
+			  //static block is initilized before initilaizing variables is causing issue. Danger comment
+			  userAgents = Files.readAllLines(Paths.get("/Users/n0r00ij/Documents/GitHub/RTS/scrapper_config",ConfigData.useragents_listPropertiesFileName),
 			          Charset.defaultCharset());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -62,7 +65,7 @@ public class HttpUtilities {
 		int numberofattempts=0;
 		boolean recievedResponse=false;
 		
-		while(numberofattempts<3 && !recievedResponse)
+		while(numberofattempts<5 && !recievedResponse)
 		{
 			
 			try {
@@ -86,7 +89,10 @@ public class HttpUtilities {
 					// TODO Auto-generated catch block
 					//e.printStackTrace();
 					numberofattempts+=1;
-					System.out.println("Retrying "+numberofattempts+" attempt fetching response for url:"+url);
+					if(numberofattempts==5)
+					{
+						System.out.println("Tried "+numberofattempts+" times and could not fetch data for :"+url);
+					}
 					Thread.sleep(10000);
 			}
 		}

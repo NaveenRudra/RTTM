@@ -17,21 +17,16 @@ public class DaoUtil {
 	}
 	
 	@Transactional
-	public static synchronized void insert(Result data)
-	{
-		 
+	public synchronized static void insert(Result data)
+	{	
 			EMfactory.em.getTransaction().begin();
 			EMfactory.em.persist(data);
 			EMfactory.em.getTransaction().commit();
-			
-		
-
-		
 
 	}
 	
-
-	public static boolean searchDuplicateByUrl(String url)
+	@Transactional
+	public synchronized static boolean searchDuplicateByUrl(String url)
 	{
 		TypedQuery<Result> query = EMfactory.em.createQuery(
 				  "SELECT result FROM Result result where result.url='"+url+"'" , Result.class);

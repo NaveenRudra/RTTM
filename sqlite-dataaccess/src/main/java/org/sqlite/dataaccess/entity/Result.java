@@ -21,11 +21,12 @@ public class Result implements Serializable {
 	@Id
 	@Column(name = "id_scrapper")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id; 
+	private Integer id;
 	private String url;
 	private String time;
 	private String searchedtext;
 	private ArrayList<String> searchedTerms;
+
 	public String getBotName() {
 		return botName;
 	}
@@ -35,9 +36,9 @@ public class Result implements Serializable {
 	}
 
 	private String botName;
-	
-	//add one extra column from future perspective
-	//add one extra column if it is false or true
+
+	// add one extra column from future perspective
+	// add one extra column if it is false or true
 	public ArrayList<String> getSearchedTerms() {
 		return searchedTerms;
 	}
@@ -70,8 +71,6 @@ public class Result implements Serializable {
 		this.searchedtext = searchedtext;
 	}
 
-
-
 	public Integer getId() {
 		return id;
 	}
@@ -79,7 +78,5 @@ public class Result implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-
 
 }

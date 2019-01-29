@@ -71,7 +71,7 @@ public class PastieImpl implements Scrapper{
 			{   String id=(String)iter.next();
 				if(!evictingQueue.contains(id))
 					{
-					Producer.send(new Data(downloadurl.replace("{id}", id),searchTerms), ConfigData.topicName);
+					Producer.send(new Data(downloadurl.replace("{id}", id),searchTerms,profile), ConfigData.topicName);
 					}
 		       
 				evictingQueue.add(id);

@@ -24,8 +24,6 @@ public class JsonParserForReddit {
 	
 	public static Set<String> redditUrlFetcher(String url) throws ParseException, InterruptedException
 	{
-		
-		 
 		 Object obj = parser.parse(HttpUtilities.sendGet(url));
          JSONArray array = (JSONArray)((JSONObject) ((JSONObject) obj).get("data")).get("children");
          @SuppressWarnings("unchecked")
@@ -33,8 +31,9 @@ public class JsonParserForReddit {
          presentSet = new HashSet<String>();
          while(iterator.hasNext())
          {
+        	 //Danger new fix is going on man
         	 JSONObject eachJsonObject = (JSONObject) iterator.next();
-        	 String redditUrl=(String)(((JSONObject)eachJsonObject.get("data")).get("url")); 
+        	 String redditUrl="https://www.reddit.com/"+(String)(((JSONObject)eachJsonObject.get("data")).get("permalink")); 
         	 if(!evictingQueue.contains(redditUrl))
         	 {
         		 presentSet.add(redditUrl);
@@ -51,7 +50,7 @@ public class JsonParserForReddit {
 	public static void main(String args []) throws InterruptedException
 	{
 		try {
-			JsonParserForReddit.redditUrlFetcher("https://www.reddit.com/search.json?q=naveencheck");
+			JsonParserForReddit.redditUrlFetcher("https://www.reddit.com/search.json?q=olacabs%20hacked");
 			//JsonParser.githubUrlFetcher("https://pastebin.com/archive");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
