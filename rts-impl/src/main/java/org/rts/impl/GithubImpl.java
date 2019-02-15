@@ -41,7 +41,7 @@ public class GithubImpl implements Scrapper {
 			try {
 				for(String searchterm:searchTerms)
 				{
-					Set<String> alertSet=JsonParserForGithub.githubUrlFetcher(baseurl.replace("{searchTerm}", searchterm)+"&access_token="+access_token);
+					Set<String> alertSet=JsonParserForGithub.githubUrlFetcher(baseurl.replace("{searchTerm}", searchterm.replace(" ", "%20"))+"&access_token="+access_token);
 					Set<String> filteredalertSet = new HashSet<String>(); 
 					
 					for(String url:alertSet)
