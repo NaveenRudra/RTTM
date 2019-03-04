@@ -50,6 +50,7 @@ public class GithubImpl implements Scrapper {
 					{
 						if(!DaoUtil.searchDuplicateByUrl(url))
 						{
+							System.out.println("Compating url" + url);
 							filteredalertSet.add(url);
 						}
 					}
