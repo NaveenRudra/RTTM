@@ -34,7 +34,7 @@ public class HttpUtilities {
 			//userAgents = Files.readAllLines(Paths.get(ConfigData.configDirectory,ConfigData.useragents_listPropertiesFileName),
 			 //         Charset.defaultCharset());
 			  //static block is initilized before initilaizing variables is causing issue. Danger comment
-			  userAgents = Files.readAllLines(Paths.get("/home/n0r00ij/rts/RTS/scrapper_config",ConfigData.useragents_listPropertiesFileName),
+			  userAgents = Files.readAllLines(Paths.get("../scrapper_config",ConfigData.useragents_listPropertiesFileName),
 			          Charset.defaultCharset());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
