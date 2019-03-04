@@ -35,6 +35,7 @@ public class TwitterImpl implements Scrapper
 	private String[] searchTerms=null;
 	final static Logger logger = Logger.getLogger(TwitterImpl.class);
 	private HashMap<String, Pattern> keywordsMap = new HashMap<>();
+	private String profile ="";
 	
     public static void main( String[] args )
     {
@@ -43,7 +44,7 @@ public class TwitterImpl implements Scrapper
 
 	public void initScrapper(Properties prop) {
 		
-		
+		this.profile= prop.getProperty("profile");
 		ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
         configurationBuilder.setOAuthConsumerKey(prop.getProperty("consumerKey"))
                 .setOAuthConsumerSecret(prop.getProperty("consumerSecret"))
@@ -130,7 +131,7 @@ public class TwitterImpl implements Scrapper
 				if(!DaoUtil.searchDuplicateByUrl(url))
 				{
 					EmailUtility.sendEmailUsingGmail("Twitter", url, termsfound);
-					DbUtil.addNewEntry(termsfound, url);
+					DbUtil.addNewEntry(termsfound, url,profile);
 				}
 				}
 				

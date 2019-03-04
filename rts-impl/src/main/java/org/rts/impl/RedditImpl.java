@@ -20,6 +20,7 @@ public class RedditImpl implements Scrapper{
 	private String baseurl;
 	private String timetoSleep;
 	private ArrayList<String> searchTerms=new ArrayList<String>();
+	private String profile ="";
 	
 	public void run() {
 		// TODO Auto-generated method stub
@@ -31,6 +32,7 @@ public class RedditImpl implements Scrapper{
 		this.baseurl=prop.getProperty("baseurl");
 		this.timetoSleep=prop.getProperty("timetosleep");
 		this.searchTerms=new ArrayList<String>(Arrays.asList(prop.getProperty("searchterms").split("\\s*,\\s*")));
+		this.profile= prop.getProperty("profile");
 		
 	}
 
@@ -60,7 +62,7 @@ public class RedditImpl implements Scrapper{
 						{
 							ArrayList<String> temp=new ArrayList<String>();
 							temp.add(searchterm);
-							DbUtil.addNewEntry(temp, url);
+							DbUtil.addNewEntry(temp, url,profile);
 						
 					     }
 				    }

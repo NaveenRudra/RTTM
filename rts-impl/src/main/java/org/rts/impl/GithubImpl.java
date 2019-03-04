@@ -19,6 +19,7 @@ public class GithubImpl implements Scrapper {
 	private String timetoSleep;
 	private ArrayList<String> searchTerms=new ArrayList<String>();
 	final static Logger logger = Logger.getLogger(GithubImpl.class);
+	private String profile ="";
 	
 	public void run() {
 		// TODO Auto-generated method stub
@@ -33,6 +34,7 @@ public class GithubImpl implements Scrapper {
 		this.access_token=prop.getProperty("access_token");
 		this.timetoSleep=prop.getProperty("timetosleep");	
 		this.searchTerms=new ArrayList<String>(Arrays.asList(prop.getProperty("searchterms").split("\\s*,\\s*")));
+		this.profile= prop.getProperty("profile");
 	}
 
 	public void kickOffActualWork() {
@@ -51,7 +53,7 @@ public class GithubImpl implements Scrapper {
 							filteredalertSet.add(url);
 						}
 					}
-					if(!(filteredalertSet.size()==0))
+					if(filteredalertSet.size()>0)
 					{
 						//System.out.println("Reuqired terms have been found");
 						EmailUtility.sendEmailUsingGmail("Github", filteredalertSet, searchterm);
@@ -61,7 +63,7 @@ public class GithubImpl implements Scrapper {
 							{
 								ArrayList<String> temp=new ArrayList<String>();
 								temp.add(searchterm);
-								DbUtil.addNewEntry(temp, url);
+								DbUtil.addNewEntry(temp, url,profile);
 							
 						     }
 					    }

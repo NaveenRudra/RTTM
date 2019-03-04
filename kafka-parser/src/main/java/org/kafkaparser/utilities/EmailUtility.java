@@ -109,6 +109,7 @@ public class EmailUtility {
 	
 	public static void sendEmailUsingGmail(String botName,Object url,ArrayList<String> termsfound )
 	{
+		System.out.println("Search term has been found in "+botName+" terms is "+termsfound.toString());
 		try {
 
 			//configurng free marjer to send message using email template
