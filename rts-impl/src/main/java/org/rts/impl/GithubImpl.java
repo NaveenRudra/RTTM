@@ -56,7 +56,7 @@ public class GithubImpl implements Scrapper {
 					if(filteredalertSet.size()>0)
 					{
 						//System.out.println("Reuqired terms have been found");
-						EmailUtility.sendEmailUsingGmail("Github", filteredalertSet, searchterm);
+						EmailUtility.sendEmailUsingGmail(profile, filteredalertSet, searchterm);
 						for(String url:filteredalertSet)
 						{
 							if(!DaoUtil.searchDuplicateByUrl(url))
