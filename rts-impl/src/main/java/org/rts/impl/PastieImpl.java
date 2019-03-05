@@ -22,7 +22,7 @@ public class PastieImpl implements Scrapper{
 	private String regex;
 	private String downloadurl;
 	private String timetoSleep;
-	public  Queue<String> evictingQueue= EvictingQueue.create(400);
+	public  Queue<String> evictingQueue= EvictingQueue.create(600);
 	public  Set<String> previousSet = new HashSet<String>();
 	public  Set<String> presentSet = new HashSet<String>();
 	public Set<String> diffSet = new HashSet<String>();
