@@ -28,12 +28,12 @@ public class DaoUtil {
 	@Transactional
 	public synchronized static boolean searchDuplicateByUrl(String url)
 	{
-		System.out.println("In db url is : "+url);
+		//System.out.println("In db url is : "+url);
 		TypedQuery<Result> query = EMfactory.em.createQuery(
 				  "SELECT result FROM Result result where result.url='"+url+"'" , Result.class);
 		ArrayList<Result> results = (ArrayList<Result>) query.getResultList();
 		
-		System.out.println("query size :"+Integer.toString(results.size()));
+		//System.out.println("query size :"+Integer.toString(results.size()));
 		if(results.size()>0)
 		{
 			return true;

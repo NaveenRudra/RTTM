@@ -28,7 +28,7 @@ public class SearchThread implements Runnable{
 	
 	public void run() {
 		// TODO Auto-generated method stub
-		System.out.println("Analyzing **********-----------  "+  data.getUrl());
+		//System.out.println("Analyzing **********-----------  "+  data.getUrl());
 		String response=null;
 		try {
 			response = HttpUtilities.sendGet(data.getUrl());
