@@ -44,9 +44,27 @@ public class SearchThread implements Runnable{
 			{
 				termsFound.add(s);
 			}**/
-			stringSearch = new Horspool(s);
+			
+			String[] terms = s.split("\\s+");
+			boolean searchTermFound=true;
+			
+			for (String each : terms) 
+			{
+				stringSearch = new Horspool(each);
+				StringFinder finder = stringSearch.createFinder(new StringCharProvider(response, 0));
+				if(finder.findAll().size()==0)
+				{
+					searchTermFound=false;
+					break;
+				}
+			}
+			/**stringSearch = new Horspool(s);
 			StringFinder finder = stringSearch.createFinder(new StringCharProvider(response, 0));
 			if(finder.findAll().size()>0)
+			{
+				termsFound.add(s);
+			}**/
+			if(searchTermFound)
 			{
 				termsFound.add(s);
 			}
