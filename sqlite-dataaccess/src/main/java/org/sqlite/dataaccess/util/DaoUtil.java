@@ -53,11 +53,21 @@ public class DaoUtil {
 //		Date date = new Date();
 //		person.setTime(dateFormat.format(date).toString());
 		System.out.println("Stated intializing*****************************************************************************");
-		for (int i=0;i<2;i++)
+		for (int i=0;i<3;i++)
 		{
 			if(searchDuplicateByUrl("http://google.com71"))
 			{
-				System.out.println("found");
+				System.out.println(Integer.toString(i) +"   *************************-----found");
+				System.out.println(Integer.toString(i) +"   *************************-----found");
+				System.out.println(Integer.toString(i) +"   *************************-----found");
+			}
+			
+			else
+			{
+				System.out.println(Integer.toString(i) +"  *************************-----not found");
+				System.out.println(Integer.toString(i) +"  *************************-----not found");
+				System.out.println(Integer.toString(i) +"  *************************-----not found");
+				
 			}
 			
 			Result person = new Result();
@@ -83,6 +93,6 @@ public class DaoUtil {
 		//EMfactory.em.persist(person);
 		//EMfactory.em.getTransaction().commit();
 		
-		System.out.println("not found");
+		
 	}
 }
