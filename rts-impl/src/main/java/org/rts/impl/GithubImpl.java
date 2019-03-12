@@ -72,7 +72,7 @@ public class GithubImpl implements Scrapper {
 				}
 				Thread.sleep(Integer.parseInt(timetoSleep));
 			} catch (Exception e) {
-				logger.error("kickOffActualWork in GithubImpl class has thrown exception",e);
+				logger.error("kickOffActualWork function in GithubImpl class has thrown exception",e);
 			}
 		
 		}
