@@ -1,5 +1,8 @@
 <h1>Real Time Threat Monitoring Tool</h1>
-<img src="RTTI_Logo.png" width='30%'/>
+<div>
+<h1>Real Time Threat Monitoring Tool</h1>
+<img src="RTTI_Logo.png" width='30%' style="float: right"/>
+</div>
 <h2>Description</h2>
 RTTI (Real Time Threat Monitoring Tool) is a tool developed to scrap all pasties,github,reddit..etc in real time to identify occurrence of search terms configured. Upon match an email will be triggered. Thus allowing company to react in case of leakage of code, any hacks tweeted..etc.. and harden themselves against an attack before it goes viral.
 
