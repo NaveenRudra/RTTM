@@ -41,6 +41,14 @@ List of sites which will be monitored are:
 <h2>Architecture:</h2>
 <img src="architecture.png" width='100%'>
 
+<h3>How it works?</h3>
+Once the tool is started , engine gets kicked off and it runs forever. The main input for this engine is the configuration file. Based on the configuration file data, engine goes ahead and probes twitter/github/reddit for matches configured in configuration file. Upon a match is found, the link of twitter/github/reddit pushed to sqlite DB and an email alert is triggered.
+
+In case of pastie sites the logic is different. The reason being they do not support search nor streaming api's. Hence any new pastie made by any user, the link is fetched and pushed to kafka. From kafka any new link added is picked up and searched for matches configured in configuration file. Upon a match is found, the link of pastie site is pushed to sqlite DB and an email alert is triggered.
+
+Over the past 2 years the tool has evolved from simple search. Artificial intelligence has been implemented to perform better search based on context. If regex is needed even that is supported. Thus behaviour is close to human and reduces false positives.
+
+For more informaton about configuration file refer below section on configuration.
 
 <h3>Configuration</h3>
 
