@@ -2,7 +2,13 @@
 <h1>Real Time Threat Monitoring Tool</h1>
 <img src="RTTI_Logo.png" width='30%' align="right"/>
 </div>
+
+Monitoring possible threats of your company on Internet is an impossible task to be achieved manually. Hence many of threats of company goes unnoticed until it becomes viral in public. Thus causing monetary/reputation damage. This is where RTTI comes into action.
 RTTI (Real Time Threat Monitoring Tool) is a tool developed to scrap all pasties,github,reddit..etc in real time to identify occurrence of search terms configured. Upon match an email will be triggered. Thus allowing company to react in case of leakage of code, any hacks tweeted..etc.. and harden themselves against an attack before it goes viral.
+
+Over the past 2 years the tool has evolved from simple search. Artificial intelligence has been implemented to perform better search based on context. If regex is needed even that is supported. Thus behaviour is close to human and reduces false positives.
+
+
 
 The same tool in malicious user hands can be used offensively to get update on any latest hacks, code leakage etc..
 
@@ -29,6 +35,9 @@ List of sites which will be monitored are:
 <li>Pastebin.fr</li>
 </ul>
 </ul>
+
+
+
 For architecture information and details of how this tool work refer documnetation folder in this repository.
 
 <h3>Configuration</h3>
