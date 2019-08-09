@@ -38,7 +38,9 @@ List of sites which will be monitored are:
 
 
 
-For architecture information and details of how this tool work refer documnetation folder in this repository.
+<h2>Architecture:</h2>
+<img src="architecture.png" width='100%'>
+
 
 <h3>Configuration</h3>
 
