@@ -8,7 +8,7 @@ RTTM (Real Time Threat Monitoring Tool) is a tool developed to scrap all pasties
 
 Over the past 2 years the tool has evolved from simple search. Artificial intelligence has been implemented to perform better search based on context. If regex is needed even that is supported. Thus behaviour is close to human and reduces false positives.
 
-<b>The best part of tool alert will be available in email in less that 60 seconds. Thus allowing response in real time to happen.</b>
+<b>The best part of tool  is that alert will be sent to email in less that 60 seconds from the time threat has made it to interent. Thus allowing response in real time to happen..</b>
 
 
 
