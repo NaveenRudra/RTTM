@@ -61,7 +61,7 @@ public class GithubImpl implements Scrapper {
 						    
 						    {
 							
-								//if(!DaoUtil.searchDuplicateByUrl(url))
+								if(!DaoUtil.searchDuplicateByUrl(url))
 								{
 									System.out.println("Analyzing url************" + url);
 									TruffleHog truffleHogThread = new TruffleHog();
