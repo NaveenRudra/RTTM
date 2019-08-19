@@ -97,12 +97,12 @@ public class TruffleHog implements Runnable{
 		    
 		    System.out.println("*********Done");
 		    
-		    if(!DaoUtil.searchDuplicateByUrl(link))
+		   /** if(!DaoUtil.searchDuplicateByUrl(link))
 			{
 
 				DbUtil.addNewEntry(secrets, link,profile,is_Valid);
 			
-		    }
+		    }**/
 		return secrets;
 	}
 	
