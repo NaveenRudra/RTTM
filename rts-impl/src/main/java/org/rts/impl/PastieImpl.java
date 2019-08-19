@@ -29,6 +29,8 @@ public class PastieImpl implements Scrapper{
 	private ArrayList<String> searchTerms=new ArrayList<String>();
 	final static Logger logger = Logger.getLogger(PastieImpl.class);
 	private String profile="";
+	private String trufflehogregex="false";
+	private String trufflehogentropy="false";
 	
 	public void initScrapper(Properties prop) {
 		// TODO Auto-generated method stub
@@ -40,6 +42,8 @@ public class PastieImpl implements Scrapper{
 		this.timetoSleep=prop.getProperty("timetosleep");
 		this.searchTerms=new ArrayList<String>(Arrays.asList(prop.getProperty("searchterms").split("\\s*,\\s*")));
 		this.profile=prop.getProperty("profile");
+		this.trufflehogregex=prop.getProperty("trufflehogregex").toLowerCase();
+		this.trufflehogentropy=prop.getProperty("trufflehogentropy").toLowerCase();
 	}
 
 	 public void run() {
@@ -71,7 +75,7 @@ public class PastieImpl implements Scrapper{
 			{   String id=(String)iter.next();
 				if(!evictingQueue.contains(id))
 					{
-					Producer.send(new Data(downloadurl.replace("{id}", id),searchTerms,profile), ConfigData.topicName);
+					Producer.send(new Data(downloadurl.replace("{id}", id),searchTerms,profile,trufflehogregex,trufflehogentropy), ConfigData.topicName);
 					}
 		       
 				evictingQueue.add(id);
