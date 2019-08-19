@@ -1,5 +1,5 @@
 <div>
-<h1>Real Time Threat Monitoring Tool</h1>
+<h1>TReal Time Threat Monitoring Tool</h1>
 <img src="RTTM_Logo.png" width='30%' align="right"/>
 </div>
 
