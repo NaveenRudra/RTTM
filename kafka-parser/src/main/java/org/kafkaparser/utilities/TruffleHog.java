@@ -75,21 +75,25 @@ public class TruffleHog implements Runnable{
 		            //System.out.println(line);
 		        	  //System.out.println();
 		        	  secrets.addAll(extractRegexMatches(line,regexForSecret));
+		        	  System.out.println(line);
 
 		          }
 		          bri.close();
 		          while ((line = bre.readLine()) != null) {
 		            //System.out.println(line);
 		        	  secrets.addAll(extractRegexMatches(line,regexForSecret));
+		        	  System.out.println(line);
 
 		          }
 		          bre.close();
 		          p.waitFor();
-		          
+		        
 		    p.destroy();
 		    Boolean is_Valid=false;
+	    	System.out.println(" before secrets has been found");
 		    if(secrets.size()>0)
 			{
+		    	System.out.println("Enetered secrets has been found");
 		    	Set<String> temp=new HashSet<String>(); 
 				temp.add(pastielink);
 		    	EmailUtility.sendEmailUsingGmail(profile, temp, searchTerm);
