@@ -96,7 +96,7 @@ public class SearchThread implements Runnable{
 					Thread t = new Thread(truffleHogThread);;							
 					t.start();
 					while(t.isAlive());
-					//deleteFile(tempFielPath);
+					deleteDirectory(new File(tempFielPath));
 					return;
 				}
 		    }
@@ -114,7 +114,13 @@ public class SearchThread implements Runnable{
 	
 	public String createFile(String data,String profile)
 	{
-		File file = new File(profile+UUID.randomUUID().toString()+".txt");
+		String tempname=profile+UUID.randomUUID().toString();
+		File dirFile = new File(tempname);
+		if (!dirFile.exists()) 
+		{
+			dirFile.mkdir();
+		}
+		File file = new File("./"+profile+UUID.randomUUID().toString()+"/"+profile+UUID.randomUUID().toString()+".txt");
 		try {
 			if (file.createNewFile()){
 				FileWriter writer = new FileWriter(file);
@@ -127,18 +133,23 @@ public class SearchThread implements Runnable{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return file.getAbsolutePath();
+		return dirFile.getAbsolutePath();
 		
 	}
 	
-	public void deleteFile(String absoluteFilePath)
+	public boolean deleteDirectory(File dir)
 	{
-		try {
-			Files.deleteIfExists(Paths.get(absoluteFilePath));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		//File dir =new File(directory);
+		if (dir.isDirectory()) {
+			 File[] children = dir.listFiles();
+			 for (int i = 0; i < children.length; i++)
+			 { boolean success = deleteDirectory(children[i]); 
+			 	if (!success) { 
+			 		return false; }
+			 }
+
 		}
+		return dir.delete();
 	}
 
 }

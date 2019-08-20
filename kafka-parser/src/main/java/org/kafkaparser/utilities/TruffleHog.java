@@ -90,10 +90,8 @@ public class TruffleHog implements Runnable{
 		        
 		    p.destroy();
 		    Boolean is_Valid=false;
-	    	System.out.println(" before secrets has been found");
 		    if(secrets.size()>0)
 			{
-		    	System.out.println("Enetered secrets has been found");
 		    	Set<String> temp=new HashSet<String>(); 
 				temp.add(pastielink);
 		    	EmailUtility.sendEmailUsingGmail(profile, temp, searchTerm);
