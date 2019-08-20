@@ -4,7 +4,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -96,7 +95,7 @@ public class SearchThread implements Runnable{
 					Thread t = new Thread(truffleHogThread);;							
 					t.start();
 					while(t.isAlive());
-					//deleteDirectory(new File(tempFielPath));
+					deleteDirectory(new File(tempFielPath));
 					return;
 				}
 		    }
@@ -128,8 +127,15 @@ public class SearchThread implements Runnable{
 				BufferedWriter output = new BufferedWriter(new FileWriter(file));
 				output.write(data);
 				output.close();
+				Git.gitInit(Paths.get(dirFile.getAbsolutePath()));
+				Git.gitStage(Paths.get(dirFile.getAbsolutePath()));
+				Git.gitCommit(Paths.get(dirFile.getAbsolutePath()), "Test");
+				
 			}
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
