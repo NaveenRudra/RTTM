@@ -54,8 +54,8 @@ public class TruffleHog implements Runnable{
 		
 		String[] cmd = {
 			      //"/usr/local/bin/python2.7",
-				  "python",
-			      "truffleHog",
+				  "/usr/bin/python2.7",
+			      "/Users/n0r00ij/Downloads/truffleHog-dev/truffleHog/truffleHog/truffleHog.py",
 			      regex,
 			      "--entropy="+entropy,
 			      "--json",
