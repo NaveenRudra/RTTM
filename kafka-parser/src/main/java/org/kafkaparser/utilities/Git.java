@@ -89,7 +89,7 @@ public class Git {
 			try (BufferedReader br = new BufferedReader(new InputStreamReader(is));) {
 				String line;
 				while ((line = br.readLine()) != null) {
-					System.out.println(type + "> " + line);
+					//System.out.println(type + "> " + line);
 				}
 			} catch (IOException ioe) {
 				ioe.printStackTrace();
