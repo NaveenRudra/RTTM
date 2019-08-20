@@ -114,12 +114,12 @@ public class SearchThread implements Runnable{
 	
 	public String createFile(String data,String profile)
 	{
-		String tempname=profile+UUID.randomUUID().toString();
+		String tempname="./"+profile+UUID.randomUUID().toString();
 		File dirFile = new File(tempname);
-		if (!dirFile.exists()) 
-		{
+		
+			System.out.println("created dir **************** ");
 			dirFile.mkdir();
-		}
+		
 		File file = new File("./"+profile+UUID.randomUUID().toString()+"/"+profile+UUID.randomUUID().toString()+".txt");
 		try {
 			if (file.createNewFile()){
