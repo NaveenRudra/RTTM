@@ -114,7 +114,7 @@ public class SearchThread implements Runnable{
 	
 	public String createFile(String data,String profile)
 	{
-		String tempname="./"+profile+UUID.randomUUID().toString();
+		String tempname=profile+UUID.randomUUID().toString();
 		File dirFile = new File(tempname);
 		
 			System.out.println("created dir **************** ");
