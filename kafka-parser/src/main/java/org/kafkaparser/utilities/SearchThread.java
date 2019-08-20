@@ -1,5 +1,6 @@
 package org.kafkaparser.utilities;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -118,8 +119,9 @@ public class SearchThread implements Runnable{
 			if (file.createNewFile()){
 				FileWriter writer = new FileWriter(file);
 				System.out.println(data+"*********************");
-				writer.write(data);
-				writer.close();
+				BufferedWriter output = new BufferedWriter(new FileWriter(file));
+				output.write(data);
+				output.close();
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
