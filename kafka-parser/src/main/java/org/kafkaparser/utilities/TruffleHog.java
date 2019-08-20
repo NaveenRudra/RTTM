@@ -90,19 +90,18 @@ public class TruffleHog implements Runnable{
 		    Boolean is_Valid=false;
 		    if(secrets.size()>0)
 			{
+		    	System.out.println("Secrets have been found");
 		    	Set<String> temp=new HashSet<String>(); 
 				temp.add(pastielink);
-				
 		    	EmailUtility.sendEmailUsingGmail(profile, temp, searchTerm);
 		    	is_Valid=true;
 			}
 		    
 		    if(!DaoUtil.searchDuplicateByUrl(pastielink))
 			{
-
 				DbUtil.addNewEntry(secrets, pastielink,profile,is_Valid);
 			
-		     }
+		    }
 		return secrets;
 	}
 	
