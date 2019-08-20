@@ -117,6 +117,7 @@ public class SearchThread implements Runnable{
 		try {
 			if (file.createNewFile()){
 				FileWriter writer = new FileWriter(file);
+				System.out.println(data+"*********************");
 				writer.write(data);
 				writer.close();
 			}
