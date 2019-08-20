@@ -120,7 +120,7 @@ public class SearchThread implements Runnable{
 			System.out.println("created dir **************** ");
 			dirFile.mkdir();
 		
-		File file = new File("./"+profile+UUID.randomUUID().toString()+"/"+profile+UUID.randomUUID().toString()+".txt");
+		File file = new File(tempname+"/"+profile+UUID.randomUUID().toString()+".txt");
 		try {
 			if (file.createNewFile()){
 				FileWriter writer = new FileWriter(file);
