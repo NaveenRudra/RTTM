@@ -54,8 +54,8 @@ public class TruffleHog implements Runnable{
 		
 		String[] cmd = {
 			      //"/usr/local/bin/python2.7",
-				  "/usr/bin/python2.7",
-			      "/Users/n0r00ij/Downloads/truffleHog-dev/truffleHog/truffleHog.py",
+				  "python",
+			      "truffleHog",
 			      regex,
 			      "--entropy="+entropy,
 			      "--json",
@@ -90,7 +90,6 @@ public class TruffleHog implements Runnable{
 		    Boolean is_Valid=false;
 		    if(secrets.size()>0)
 			{
-		    	System.out.println("Secrets have been found");
 		    	Set<String> temp=new HashSet<String>(); 
 				temp.add(pastielink);
 		    	EmailUtility.sendEmailUsingGmail(profile, temp, searchTerm);
