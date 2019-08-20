@@ -70,7 +70,7 @@ public class TruffleHog implements Runnable{
 		   // p.waitFor();
 		    BufferedReader bri = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		    BufferedReader bre = new BufferedReader(new InputStreamReader(p.getErrorStream()));
-		          String line;
+		         String line;
 		        while ((line = bri.readLine()) != null) {
 		            //System.out.println(line);
 		        	  //System.out.println();
@@ -92,6 +92,7 @@ public class TruffleHog implements Runnable{
 		    Boolean is_Valid=false;
 		    if(secrets.size()>0)
 			{
+		    	System.out.println("Issues have been found ************* Sending email");
 		    	Set<String> temp=new HashSet<String>(); 
 				temp.add(pastielink);
 		    	EmailUtility.sendEmailUsingGmail(profile, temp, searchTerm);

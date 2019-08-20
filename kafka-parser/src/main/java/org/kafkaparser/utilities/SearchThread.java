@@ -123,7 +123,6 @@ public class SearchThread implements Runnable{
 		try {
 			if (file.createNewFile()){
 				FileWriter writer = new FileWriter(file);
-				System.out.println(data+"*********************");
 				BufferedWriter output = new BufferedWriter(new FileWriter(file));
 				output.write(data);
 				output.close();
