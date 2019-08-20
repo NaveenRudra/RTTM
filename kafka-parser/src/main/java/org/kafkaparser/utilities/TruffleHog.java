@@ -91,6 +91,7 @@ public class TruffleHog implements Runnable{
 			{
 		    	Set<String> temp=new HashSet<String>(); 
 				temp.add(pastielink);
+				
 		    	EmailUtility.sendEmailUsingGmail(profile, temp, searchTerm);
 			}
 		    
