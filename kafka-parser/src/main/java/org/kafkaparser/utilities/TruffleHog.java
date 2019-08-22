@@ -54,8 +54,10 @@ public class TruffleHog implements Runnable{
 		
 		String[] cmd = {
 			      //"/usr/local/bin/python2.7",
-				  "/usr/bin/python2.7",
-			      "/Users/n0r00ij/Downloads/truffleHog-dev/truffleHog/truffleHog/truffleHog.py",
+				  //"/usr/bin/python2.7",
+			      //"/Users/n0r00ij/Downloads/truffleHog-dev/truffleHog/truffleHog/truffleHog.py",
+				  ConfigData.pythonPath,
+				  ConfigData.trufflehogPath,
 			      regex,
 			      "--entropy="+entropy,
 			      "--json",
@@ -72,7 +74,7 @@ public class TruffleHog implements Runnable{
 		    BufferedReader bre = new BufferedReader(new InputStreamReader(p.getErrorStream()));
 		         String line;
 		        while ((line = bri.readLine()) != null) {
-		            //System.out.println(line);
+		             //System.out.println(line);
 		        	  //System.out.println();
 		        	  secrets.addAll(extractRegexMatches(line,regexForSecret));
 		        	  System.out.println(line);
@@ -80,7 +82,7 @@ public class TruffleHog implements Runnable{
 		          }
 		          bri.close();
 		          while ((line = bre.readLine()) != null) {
-		            //System.out.println(line);
+		             //System.out.println(line);
 		        	  secrets.addAll(extractRegexMatches(line,regexForSecret));
 		        	  System.out.println(line);
 

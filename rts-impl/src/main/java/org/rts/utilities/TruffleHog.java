@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.kafkaparser.utilities.ConfigData;
 import org.kafkaparser.utilities.DbUtil;
 import org.kafkaparser.utilities.EmailUtility;
 import org.sqlite.dataaccess.util.DaoUtil;
@@ -23,6 +24,8 @@ public class TruffleHog implements Runnable{
 	private String profile;
 	private String regex;
 	private String entropy;
+	private String pythonPath;
+	private String trufflehogPath;
 	
 	
 	public void initilaize(String pastielink,String searchTerm,String profile,String regex,String entropy)
@@ -53,9 +56,11 @@ public class TruffleHog implements Runnable{
 		
 		
 		String[] cmd = {
-				  //"/usr/local/bin/python2.7",
-			      "/usr/bin/python2.7",
-			      "/Users/n0r00ij/Downloads/truffleHog-dev/truffleHog/truffleHog/truffleHog.py",
+			      //"/usr/local/bin/python2.7",
+				  //"/usr/bin/python2.7",
+			      //"/Users/n0r00ij/Downloads/truffleHog-dev/truffleHog/truffleHog/truffleHog.py",
+				  ConfigData.pythonPath,
+				  ConfigData.trufflehogPath,
 			      regex,
 			      "--entropy="+entropy,
 			      "--json",
