@@ -24,17 +24,17 @@ import com.google.common.io.Resources;
 public class HttpUtilities {
 	
 	private static String User_Agent="Mozilla/5.0";
-	private static List<String> userAgents;
+	private static List<String> userAgents = new ArrayList<>();
 	private static Random rand;
 	
-	  static
+	  public static void initialize()
 	  {
 		  rand=new Random();
 		  try {
-			//userAgents = Files.readAllLines(Paths.get(ConfigData.configDirectory,ConfigData.useragents_listPropertiesFileName),
+			 //userAgents = Files.readAllLines(Paths.get(ConfigData.configDirectory,ConfigData.useragents_listPropertiesFileName),
 			 //         Charset.defaultCharset());
 			  //static block is initilized before initilaizing variables is causing issue. Danger comment
-			  userAgents = Files.readAllLines(Paths.get("/Users/n0r00ij/Documents/GitHub/RTS/scrapper_config",ConfigData.useragents_listPropertiesFileName),
+			  userAgents = Files.readAllLines(Paths.get(ConfigData.configDirectory,ConfigData.useragents_listPropertiesFileName),
 			          Charset.defaultCharset());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -60,6 +60,11 @@ public class HttpUtilities {
 	
 	public static String sendGet(String url) throws InterruptedException 
 	{
+		
+		if(userAgents.size()==0)
+		{
+			initialize();
+		}
 		
 		StringBuffer response =null;
 		int numberofattempts=0;
