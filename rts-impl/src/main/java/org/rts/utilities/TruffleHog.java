@@ -101,7 +101,7 @@ public class TruffleHog implements Runnable{
 		    	is_Valid=true;
 			}
 		    
-		    System.out.println("*********Done");
+		   // System.out.println("*********Done");
 		    
 		    if(!DaoUtil.searchDuplicateByUrl(link))
 			{
