@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -89,7 +90,8 @@ public class TruffleHog implements Runnable{
 
 		          }
 		          bre.close();
-		          p.waitFor();
+		          
+		          p.waitFor(5,TimeUnit.MINUTES);
 		          
 		    p.destroy();
 		    Boolean is_Valid=false;
