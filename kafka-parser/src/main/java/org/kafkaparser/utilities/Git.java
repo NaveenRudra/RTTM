@@ -69,9 +69,11 @@ public class Git {
 		int exit = p.waitFor();
 		errorGobbler.join();
 		outputGobbler.join();
+		p.destroy();
 		if (exit != 0) {
 			throw new AssertionError(String.format("runCommand returned %d", exit));
 		}
+		
 	}
 
 	private static class StreamGobbler extends Thread {
