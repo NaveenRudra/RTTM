@@ -63,7 +63,7 @@ public class TruffleHog implements Runnable{
 				  ConfigData.pythonPath,
 				  ConfigData.trufflehogPath,
 			      regex,
-			      "--cleanup",
+			      "--cleanup=True",
 			      "--entropy="+entropy,
 			      "--json",
 			      link};
