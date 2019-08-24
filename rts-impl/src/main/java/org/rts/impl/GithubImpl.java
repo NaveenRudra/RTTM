@@ -123,6 +123,8 @@ public class GithubImpl implements Scrapper {
 			} catch (Exception e) {
 				logger.error("kickOffActualWork function in GithubImpl class has thrown exception",e);
 			}
+			
+			System.gc();
 		
 		}
 		

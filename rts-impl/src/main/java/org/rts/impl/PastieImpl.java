@@ -53,7 +53,7 @@ public class PastieImpl implements Scrapper{
 		        {
 		        	kickOffActualWork();
 		            Thread.sleep(Integer.parseInt(timetoSleep));
-					
+		            System.gc();
 		        }
 		        } catch (InterruptedException e) {
 					// TODO Auto-generated catch block

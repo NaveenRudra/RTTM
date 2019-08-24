@@ -101,7 +101,7 @@ public class RedditImpl implements Scrapper{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		System.gc();
 		}
 		 
 		

@@ -120,6 +120,7 @@ public class SearchThread implements Runnable{
 			dirFile.mkdir();
 		
 		File file = new File(tempname+"/"+profile+UUID.randomUUID().toString()+".txt");
+	
 		try {
 			if (file.createNewFile()){
 				FileWriter writer = new FileWriter(file);
@@ -129,6 +130,7 @@ public class SearchThread implements Runnable{
 				Git.gitInit(Paths.get(dirFile.getAbsolutePath()));
 				Git.gitStage(Paths.get(dirFile.getAbsolutePath()));
 				Git.gitCommit(Paths.get(dirFile.getAbsolutePath()), "Test");
+				writer.close();
 				
 			}
 		} catch (IOException e) {
@@ -138,6 +140,7 @@ public class SearchThread implements Runnable{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		return dirFile.getAbsolutePath();
 		
 	}
@@ -154,6 +157,7 @@ public class SearchThread implements Runnable{
 			 }
 
 		}
+	
 		return dir.delete();
 	}
 
