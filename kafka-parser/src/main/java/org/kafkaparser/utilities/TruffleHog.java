@@ -90,7 +90,7 @@ public class TruffleHog implements Runnable{
 
 		          }
 		          bre.close();
-		          p.waitFor(5,TimeUnit.MINUTES);
+		          p.waitFor();
 		        
 		    p.destroy();
 		    Boolean is_Valid=false;
@@ -102,6 +102,11 @@ public class TruffleHog implements Runnable{
 		    	EmailUtility.sendEmailUsingGmail(profile, temp, searchTerm);
 		    	is_Valid=true;
 			}
+		    
+		   /** if(regex.toLowerCase().equals("false") && this.entropy.toLowerCase().equals("false"))
+		    {
+		    	
+		    }**/
 		    
 		    if(!DaoUtil.searchDuplicateByUrl(pastielink))
 			{
