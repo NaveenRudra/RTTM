@@ -90,7 +90,7 @@ public class TruffleHog implements Runnable{
 
 		          }
 		          bre.close();
-		          p.waitFor();
+		          p.waitFor(5,TimeUnit.MINUTES);
 		        
 		    p.destroy();
 		    Boolean is_Valid=false;
