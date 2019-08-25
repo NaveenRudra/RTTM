@@ -95,6 +95,7 @@ public class TruffleHog implements Runnable{
 		          p.waitFor(5,TimeUnit.MINUTES);
 		          
 		    p.destroy();
+		    
 		    Boolean is_Valid=false;
 		    if(secrets.size()>0)
 			{
@@ -104,14 +105,15 @@ public class TruffleHog implements Runnable{
 		    	is_Valid=true;
 			}
 		    
-		   // System.out.println("*********Done");
-		    
 		    if(!DaoUtil.searchDuplicateByUrl(link))
 			{
 
 				DbUtil.addNewEntry(secrets, link,profile,is_Valid);
 			
 		    }
+		   // System.out.println("*********Done");
+		    
+		    
 		return secrets;
 	}
 	
