@@ -23,6 +23,7 @@ public class DaoUtil {
 	{	
 			EMfactory.em.getTransaction().begin();
 			EMfactory.em.persist(data);
+			//EMfactory.em.flush();
 			EMfactory.em.getTransaction().commit();
 
 	}

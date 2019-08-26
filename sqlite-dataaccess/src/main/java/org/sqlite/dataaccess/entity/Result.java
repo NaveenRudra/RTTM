@@ -23,8 +23,8 @@ public class Result implements Serializable {
 
 	@Id
 	@Column(name = "id_scrapper",unique = true, nullable = false)
-	@GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY)
-	private Integer id;
+	//@GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY)
+	//private Integer id;
 	private String url;
 	private String time;
 	private String searchedtext;
@@ -108,12 +108,12 @@ public class Result implements Serializable {
 		this.searchedtext = searchedtext;
 	}
 
-	public Integer getId() {
+	/**public Integer getId() {
 		return id;
 	}
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
+	}**/
 
 }
