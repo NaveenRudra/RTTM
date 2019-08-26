@@ -22,7 +22,7 @@ public class Result implements Serializable {
 	private static final long serialVersionUID = -7250234396452258822L;
 
 	@Id
-	@Column(name = "id_scrapper",unique = true, nullable = false)
+	@Column(name = "url",unique = true, nullable = false)
 	//@GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY)
 	//private Integer id;
 	private String url;
