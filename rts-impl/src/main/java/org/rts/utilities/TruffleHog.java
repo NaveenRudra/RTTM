@@ -72,7 +72,8 @@ public class TruffleHog implements Runnable{
 		
 		
 		
-		
+			if(!DaoUtil.searchDuplicateByUrl(link))
+			{
 			Process p = Runtime.getRuntime().exec(cmd);
 		   // p.waitFor();
 		    BufferedReader bri = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -95,6 +96,9 @@ public class TruffleHog implements Runnable{
 		          p.waitFor(5,TimeUnit.MINUTES);
 		          
 		    p.destroy();
+		    
+			}
+		    
 		    
 		    Boolean is_Valid=false;
 		    if(secrets.size()>0)
