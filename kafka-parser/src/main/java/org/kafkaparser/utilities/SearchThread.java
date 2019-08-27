@@ -95,7 +95,7 @@ public class SearchThread implements Runnable{
 					Thread t = new Thread(truffleHogThread);;							
 					t.start();
 					while(t.isAlive());
-					//deleteDirectory(new File(tempFielPath));
+					deleteDirectory(new File(tempFielPath));
 					return;
 				}
 		    }
