@@ -79,7 +79,7 @@ public class TruffleHog implements Runnable{
 		             //System.out.println(line);
 		        	  //System.out.println();
 		        	  secrets.addAll(extractRegexMatches(line,regexForSecret));
-		        	  System.out.println(line);
+		        	  //System.out.println(line);
 
 		          }
 		          bri.close();
