@@ -91,8 +91,9 @@ public class TruffleHog implements Runnable{
 		          }
 		          bre.close();
 		          p.waitFor(5,TimeUnit.MINUTES);
+		          p.destroyForcibly();
 		        
-		    p.destroy();
+		   // p.destroy();
 		    
 		
 		    
