@@ -95,7 +95,7 @@ public class TruffleHog implements Runnable{
 		          }
 		          bre.close();
 		          //Important decide if this is needed or remove it
-		          p.waitFor(5,TimeUnit.MINUTES);
+		          p.waitFor(5,TimeUnit.SECONDS);
 		          Field f;
 		          int pid=1111111;
 				try {
