@@ -3,6 +3,7 @@ package org.rts.utilities;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -75,6 +76,7 @@ public class TruffleHog implements Runnable{
 			if(!DaoUtil.searchDuplicateByUrl(link))
 			{
 			Process p = Runtime.getRuntime().exec(cmd);
+			
 		   // p.waitFor();
 		    BufferedReader bri = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		    BufferedReader bre = new BufferedReader(new InputStreamReader(p.getErrorStream()));
@@ -94,6 +96,27 @@ public class TruffleHog implements Runnable{
 		          bre.close();
 		          //Important decide if this is needed or remove it
 		          p.waitFor(5,TimeUnit.MINUTES);
+		          Field f;
+		          int pid=1111111;
+				try {
+					f = p.getClass().getDeclaredField("pid");
+					f.setAccessible(true);
+			        pid = (Integer)f.get(p);
+			        System.out.println("******************"+pid);
+				} catch (NoSuchFieldException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (SecurityException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IllegalArgumentException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IllegalAccessException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		          
 		          p.destroyForcibly();
 		          
 		   // p.destroy();
