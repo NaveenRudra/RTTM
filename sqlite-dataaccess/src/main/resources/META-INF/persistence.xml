@@ -18,11 +18,15 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>org.sqlite.dataaccess.entity.Result</class>
 		  <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://35.192.45.233:3306/rts?autoReconnect=true" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/rts?autoReconnect=true" />
             <property name="javax.persistence.jdbc.user" value="admin" />
             <property name="javax.persistence.jdbc.password" value="password" />
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <!--
+            //No idea why this dialect wasn't working. Maybe because of the version 
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> 
+            -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
         </properties>
