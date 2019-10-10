@@ -23,25 +23,10 @@ import com.google.common.io.Resources;
 
 public class HttpUtilities {
 	
-	private static String User_Agent="Mozilla/5.0";
-	private static List<String> userAgents;
-	private static Random rand;
+
 	
-	  static
-	  {
-		  rand=new Random();
-		  try {
-			//userAgents = Files.readAllLines(Paths.get(ConfigData.configDirectory,ConfigData.useragents_listPropertiesFileName),
-			 //         Charset.defaultCharset());
-			  //static block is initilized before initilaizing variables is causing issue. Danger comment
-			  userAgents = Files.readAllLines(Paths.get("./scrapper_config",ConfigData.useragents_listPropertiesFileName),
-			          Charset.defaultCharset());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-	  }
-	  
+
+	  private static Random rand =  new Random();
 
 	
 	
@@ -61,6 +46,8 @@ public class HttpUtilities {
 	public static String sendGet(String url) throws InterruptedException 
 	{
 		
+		
+		
 		StringBuffer response =null;
 		int numberofattempts=0;
 		boolean recievedResponse=false;
@@ -72,7 +59,7 @@ public class HttpUtilities {
 				URL obj = new URL(url);
 				HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 				con.setRequestMethod("GET");
-				con.setRequestProperty("User-Agent", userAgents.get(rand.nextInt(userAgents.size())));
+				con.setRequestProperty("User-Agent", ConfigData.userAgents.get(rand.nextInt(ConfigData.userAgents.size())));
 				//con.setRequestProperty("User-Agent", User_Agent);
 				BufferedReader in = new BufferedReader(
 				        new InputStreamReader(con.getInputStream()));

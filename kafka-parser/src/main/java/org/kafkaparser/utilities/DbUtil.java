@@ -20,7 +20,7 @@ public class DbUtil {
 				Result result = new Result();
 				result.setSearchedTerms(termsFound);
 	     		result.setSearchedtext("This is for future implementation");
-	     		result.setBotName("Future");
+	     		result.setBotName(data.getBotName());
 				result.setUrl(data.getUrl());
 				result.setTime(df.format(dateobj).toString());
 				DaoUtil.insert(result);
@@ -49,6 +49,20 @@ public class DbUtil {
 	     		result.setBotName(botName);
 				result.setUrl(url);
 				result.setTime(df.format(dateobj).toString());
+				DaoUtil.insert(result);
+		
+	}
+	
+	public static void addNewEntry(ArrayList<String> termsFound,String url,String botName,Boolean is_Valid)
+	{
+
+				Result result = new Result();
+				result.setSearchedTerms(termsFound);
+	     		result.setSearchedtext("This is for future implementation");
+	     		result.setBotName(botName);
+				result.setUrl(url);
+				result.setTime(df.format(dateobj).toString());
+				result.setIs_valid(is_Valid);
 				DaoUtil.insert(result);
 		
 	}

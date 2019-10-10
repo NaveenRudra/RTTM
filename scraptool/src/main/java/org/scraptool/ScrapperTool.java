@@ -21,7 +21,7 @@ public class ScrapperTool {
 	final static Logger logger = Logger.getLogger(ScrapperTool.class);
 	public static String configDirectory;
 	public static String topicname;
-	static File configDirectoryfile;
+	static File configDirectoryfile; 
 	
 	public static void initializeScrappers(String configDirectory)
 	{
