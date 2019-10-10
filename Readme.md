@@ -150,7 +150,7 @@ Commands needed to start kafka in linux:
 
 <b>Contributors:</b>
 <ul>
-<li>Sunny Sharama</li>     
+<li>Sunny Sharma</li>     
 <li>Murali Segu </li>                                                                                           
 </ul>
 
