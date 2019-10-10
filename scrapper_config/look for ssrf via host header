@@ -1,0 +1,21 @@
+look for ssrf via host header
+
+Verbose error message:
+1. Add a "Debug=true" directive at the top of the file that generated the error. Example:
+
+  <%@ Page Language="C#" Debug="true" %>
+
+or:
+
+2) Add the following section to the configuration file of your application:
+
+<configuration>
+   <system.web>
+       <compilation debug="true"/>
+   </system.web>
+</configuration>
+
+Forceful browsing:
+https://suppliersourcing.qa.walmart.com/odc_selection.aspx	
+
+Viewstate can be decryoted

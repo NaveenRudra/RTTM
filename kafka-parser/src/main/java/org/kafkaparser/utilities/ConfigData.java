@@ -1,5 +1,7 @@
 package org.kafkaparser.utilities;
 
+import java.util.List;
+
 public class ConfigData {
 	
 	public static String consumerPropertiesFileName = "consumer.properties";
@@ -10,4 +12,7 @@ public class ConfigData {
 	public static String useragents_listPropertiesFileName = "useragents-list.txt";
 	public static String configDirectory =null;
 	public static String topicName=null;
+	public static String pythonPath="";
+	public static String trufflehogPath=""; 
+	public static List<String> userAgents;
 }

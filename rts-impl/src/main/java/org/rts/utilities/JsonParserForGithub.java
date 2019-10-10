@@ -31,7 +31,9 @@ public class JsonParserForGithub {
          while(iterator.hasNext())
          {
         	 JSONObject eachJsonObject = (JSONObject) iterator.next();
-        	 String html_url=(String)eachJsonObject.get("html_url");
+        	 JSONObject eachrepositoryObject = (JSONObject) eachJsonObject.get("repository");
+        	 String html_url=(String)eachrepositoryObject.get("html_url");
+        	 html_url=html_url+".git";
         	 if(!evictingQueue.contains(html_url))
         	 {
         		 //System.out.println("Github "+html_url);
