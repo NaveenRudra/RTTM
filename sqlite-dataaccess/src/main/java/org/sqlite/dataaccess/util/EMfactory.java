@@ -10,7 +10,7 @@ public class EMfactory {
 	public static EntityManager em;
 	
 	public static void setUp() {
-		emf = Persistence.createEntityManagerFactory("sqlite-dataAccess");
+		emf = Persistence.createEntityManagerFactory("mysql-dataAccess");
 	}
 	
 	public static void initEntityManager() {

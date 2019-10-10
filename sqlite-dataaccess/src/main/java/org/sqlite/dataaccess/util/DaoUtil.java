@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import org.sqlite.dataaccess.entity.Result;
@@ -21,6 +23,7 @@ public class DaoUtil {
 	{	
 			EMfactory.em.getTransaction().begin();
 			EMfactory.em.persist(data);
+			//EMfactory.em.flush();
 			EMfactory.em.getTransaction().commit();
 
 	}
@@ -29,8 +32,12 @@ public class DaoUtil {
 	public synchronized static boolean searchDuplicateByUrl(String url)
 	{
 		//System.out.println("In db url is : "+url);
+		
+		//TypedQuery<Result> query = EMfactory.em.createQuery(
+		//		  "SELECT result FROM Result result where result.url='"+url+"'" , Result.class);
 		TypedQuery<Result> query = EMfactory.em.createQuery(
-				  "SELECT result FROM Result result where result.url='"+url+"'" , Result.class);
+				  "SELECT result FROM Result result where result.url=:url" , Result.class);
+		query.setParameter("url", url);
 		ArrayList<Result> results = (ArrayList<Result>) query.getResultList();
 		
 		//System.out.println("query size :"+Integer.toString(results.size()));

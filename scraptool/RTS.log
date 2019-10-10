@@ -1,0 +1,20 @@
+2019-08-15 19:52:43 ERROR ScrapperTool:90 - Something wrong happened in scrappers
+java.lang.NullPointerException
+	at org.rts.impl.PastieImpl.initScrapper(PastieImpl.java:45)
+	at org.rts.rtsprofile.CodepadProfile.newInstance(CodepadProfile.java:19)
+	at org.rts.base.profileregistry.ScrapperProfileRegistry.newScrapProfile(ScrapperProfileRegistry.java:30)
+	at org.rts.base.ScrapperImpl.initialize(ScrapperImpl.java:51)
+	at org.rts.base.ScrapperImpl.initialize(ScrapperImpl.java:38)
+	at org.scraptool.ScrapperTool.initializeScrappers(ScrapperTool.java:40)
+	at org.scraptool.ScrapperTool.startScrappers(ScrapperTool.java:80)
+	at org.scraptool.ScrapperTool.main(ScrapperTool.java:127)
+2019-08-15 19:54:17 ERROR ScrapperTool:90 - Something wrong happened in scrappers
+java.lang.NullPointerException
+	at org.rts.impl.PastieImpl.initScrapper(PastieImpl.java:45)
+	at org.rts.rtsprofile.CodepadProfile.newInstance(CodepadProfile.java:19)
+	at org.rts.base.profileregistry.ScrapperProfileRegistry.newScrapProfile(ScrapperProfileRegistry.java:30)
+	at org.rts.base.ScrapperImpl.initialize(ScrapperImpl.java:51)
+	at org.rts.base.ScrapperImpl.initialize(ScrapperImpl.java:38)
+	at org.scraptool.ScrapperTool.initializeScrappers(ScrapperTool.java:40)
+	at org.scraptool.ScrapperTool.startScrappers(ScrapperTool.java:80)
+	at org.scraptool.ScrapperTool.main(ScrapperTool.java:127)
