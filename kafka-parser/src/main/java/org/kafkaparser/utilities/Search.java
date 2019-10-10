@@ -21,6 +21,7 @@ public class Search
 	
 	public static void find(Data data) throws IOException
 	{
+		//System.out.println(data.getUrl());
 		SearchThread searchThread=new SearchThread();
 		searchThread.initialize(data);
 		new Thread(searchThread).start();

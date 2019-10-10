@@ -13,8 +13,23 @@ public class Data {
 	private String url;
 	
 	private String botName="RTS";
+	private String trufflehogregex="true";
+	private String trufflehogentropy="false";
 
 
+	public String getTrufflehogregex() {
+		return trufflehogregex;
+	}
+	public void setTrufflehogregex(String trufflehogregex) {
+		this.trufflehogregex = trufflehogregex;
+	}
+	public String getTrufflehogentropy() {
+		return trufflehogentropy;
+	}
+	public void setTrufflehogentropy(String trufflehogentropy) {
+		this.trufflehogentropy = trufflehogentropy;
+	}
+	
 	public String getBotName() {
 		return botName;
 	}
@@ -29,11 +44,14 @@ public class Data {
 	}
 	
 	@JsonCreator
-	public Data(@JsonProperty("url")String url,@JsonProperty("searchTerms")ArrayList<String> searchTerms,@JsonProperty("botName") String botName)
+	public Data(@JsonProperty("url")String url,@JsonProperty("searchTerms")ArrayList<String> searchTerms,@JsonProperty("botName") String botName,
+			@JsonProperty("trufflehogregex") String trufflehogregex,@JsonProperty("trufflehogentropy") String trufflehogentropy)
 	{
 		this.url=url;
 		this.searchTerms=searchTerms;
 		this.botName = botName;
+		this.trufflehogentropy=trufflehogentropy;
+		this.trufflehogregex=trufflehogregex;
 		
 	}
 	public String getUrl() {
