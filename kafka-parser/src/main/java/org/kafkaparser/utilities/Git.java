@@ -58,10 +58,7 @@ public class Git {
 		if (!Files.exists(directory)) {
 			throw new RuntimeException("can't run command in non-existing directory '" + directory + "'");
 		}
-		System.out.println(directory.toString()+"kjdnjksdkfjakldsf");
-		for (String string : command) {
-			System.out.println(string);
-		}
+		
 		ProcessBuilder pb = new ProcessBuilder()
 				.command(command)
 				.directory(directory.toFile());

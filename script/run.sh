@@ -15,7 +15,7 @@ if [ ! -z "${NUM_PARTITIONS}" ]; then
 fi
 
 #delete topic
-/opt/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic test
+#/opt/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic test
 
 sleep 2
 
@@ -47,5 +47,15 @@ seelp 4
 
 #Start mysql server
 service mysql start
+
+git config --global user.email "test@example.com"
+
+echo "create database rttm COLLATE 'utf8_unicode_ci';" |mysql -uroot
+echo "CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password';" |mysql -uroot
+echo "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;" |mysql -uroot
+echo "CREATE USER 'admin'@'%' IDENTIFIED BY 'password';" |mysql -uroot
+echo "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;" |mysql -uroot
+echo "SHOW GRANTS FOR admin;" |mysql -uroot
+echo "FLUSH PRIVILEGES;" |mysql -uroot
 
 exit

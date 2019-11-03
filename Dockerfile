@@ -8,9 +8,9 @@ RUN apt install -y maven
 
 RUN apt-get install git
 
-RUN apt-get install -y mysql-server
+RUN git config --global user.email "test@rttm.com"
 
-RUN service mysql start
+RUN apt-get install -y mysql-server
 
 RUN apt-get install -y \
             zookeeper \
@@ -45,20 +45,12 @@ RUN python get-pip.py
 
 RUN rm get-pip.py
 
-RUN apt-get update 
 
-RUN apt-get install -y python3
+WORKDIR /opt/RTTM/truffleHog
 
-RUN apt install -y python3-pip
+RUN pip install -r requirements.txt
 
-RUN pip install -r /opt/RTTM/truffleHog/requirements.txt
-
-RUN python /opt/RTTM/truffleHog/setup.py install
-
-RUN apt-get update 
-
-
-
+RUN python setup.py install
 
 
 WORKDIR /opt/RTTM/RTTM
