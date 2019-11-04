@@ -24,5 +24,4 @@ service mysql start
 git config --global user.email "test@example.com"
 
 
-
 exit

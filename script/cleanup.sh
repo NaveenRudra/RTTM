@@ -1,7 +1,7 @@
 #delete topic
 /opt/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic test
 
-sleep 2
+sleep 2 
 
 #stop kafka server
 /opt/kafka/bin/kafka-server-stop.sh
