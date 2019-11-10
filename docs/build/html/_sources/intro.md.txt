@@ -1,13 +1,48 @@
 Intro 
 =====
-welcome this is hte first documentation we are achieveing man
 
-#List
-This is a sample list
-*List item 1
-*List item2
+.. image:: _static/RTTM_Logo.png
+   :scale: 30 %
+   :align: right
+   :class: intro-logo
 
-#Sample C code
-'''C
-asdasd
-'''
+Monitoring possible threats of your company on Internet is an impossible task to be achieved manually. Hence many threats of the company goes unnoticed until it becomes viral in public. Thus causing monetary/reputation damage. This is where RTTM comes into action. RTTM (Real Time Threat Monitoring Tool) is a tool developed to scrap all pasties,github,reddit..etc in real time to identify occurrence of search terms configured. Upon match an email will be triggered. Thus allowing company to react in case of leakage of code, any hacks tweeted..etc.. and harden themselves against an attack before it goes viral.
+
+Over the past 2 years the tool has evolved from simple search. Artificial intelligence has been implemented to perform better search based on context. If regex is needed even that is supported. Thus behaviour is close to human and reduces false positives.
+
+The best part of tool is that alert will be sent to email in less that 60 seconds from the time threat has made it to interent. Thus allowing response in real time to happen..
+
+The same tool in malicious user hands can be used offensively to get update on any latest hacks, code leakage etc..
+
+List of sites which will be monitored are:
+
+
+Bullet points
+-------------
+
+This is a subsection making bullet points
+
+* point A
+
+* point B
+
+* point C
+
+**Non-Pastie Sites:**
+#.Twitter
+#.Reddit
+#.Github
+
+**Pastie Sites**
+*Pastebin.com
+*Codepad.org
+*Dumpz.org
+*Snipplr.com
+*Paste.org.ru
+*Gist.github.com
+*Pastebin.ca
+*Kpaste.net
+*Slexy.org
+*Ideone.com
+*Pastebin.fr
+
