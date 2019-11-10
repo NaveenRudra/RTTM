@@ -17,20 +17,37 @@ The same tool in malicious user hands can be used offensively to get update on a
 List of sites which will be monitored are:
 
 **Non-Pastie Sites:**
+
 * Twitter
+
 * Reddit
+
 * Github
 
+
 **Pastie Sites**
+
 * Pastebin.com
+
 * Codepad.org
+
 * Dumpz.org
+
 * Snipplr.com
+
 * Paste.org.ru
+
 * Gist.github.com
+
 * Pastebin.ca
+
 * Kpaste.net
+
 * Slexy.org
+
 * Ideone.com
+
 * Pastebin.fr
+
+
 

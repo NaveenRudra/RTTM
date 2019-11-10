@@ -17,9 +17,13 @@ The same tool in malicious user hands can be used offensively to get update on a
 List of sites which will be monitored are:
 
 **Non-Pastie Sites:**
+
 * Twitter
+
 * Reddit
+
 * Github
+
 
 **Pastie Sites**
 * Pastebin.com
