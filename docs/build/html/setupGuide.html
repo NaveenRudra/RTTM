@@ -86,7 +86,10 @@
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apiKeySetUp.html">API Key Setup</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">SetupGuide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SetupGuide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-via-docker"><strong>Install via Docker</strong></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
 <li class="toctree-l1"><a class="reference internal" href="roadmap.html">RoadMap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
@@ -157,7 +160,20 @@
             
   <div class="section" id="setupguide">
 <h1>SetupGuide<a class="headerlink" href="#setupguide" title="Permalink to this headline">¶</a></h1>
-<p>asd</p>
+<div class="section" id="install-via-docker">
+<h2><strong>Install via Docker</strong><a class="headerlink" href="#install-via-docker" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Install docker in your system</p></li>
+<li><p>Download Dockerfile from <a class="reference external" href="https://github.com/NaveenRudra/RTTM">https://github.com/NaveenRudra/RTTM</a></p></li>
+<li><p>Change directory to RTTM</p></li>
+<li><p>execute <em>docker build .</em></p></li>
+<li><p>Run <em>docker exec -it &lt;container id&gt; /bin/bash</em></p></li>
+<li><p>Now once in docker navigate to <em>/opt/RTTM/script</em></p></li>
+<li><p>Run <em>intialize.sh</em> script. This will boot mysql server and starts kafka.</p></li>
+<li><p>Run <em>db_setup.sh</em> this will created needed table.</p></li>
+<li><p>Now from <em>/opt/RTTM</em> run command <em>java -jar scraptool/target/scraptool-1.0-SNAPSHOT-standalone.jar -t test -c /home/n0r00ij/RTS/scrapper_config/</em></p></li>
+</ul>
+</div>
 </div>
 
 

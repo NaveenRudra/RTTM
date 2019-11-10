@@ -84,7 +84,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Intro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#consumer-properties"><strong>consumer.properties</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#producer-properties"><strong>producer.properties</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#email-properties"><strong>email.properties</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scanner-configuration-properties"><strong>scanner-configuration.properties</strong></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="apiKeySetUp.html">API Key Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setupGuide.html">SetupGuide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging</a></li>
@@ -157,7 +163,69 @@
             
   <div class="section" id="configuration">
 <h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
-<p>asd</p>
+<p>Before using this tool is is neccessary to understand the properties file present in scrapper_config directory.</p>
+<div class="section" id="consumer-properties">
+<h2><strong>consumer.properties</strong><a class="headerlink" href="#consumer-properties" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Holds all the neccessary config data needed for consumer of Kafka (Refer apache Kafka guide for more information). The values present here are default options and does nto require any changes</p>
+</div></blockquote>
+</div>
+<div class="section" id="producer-properties">
+<h2><strong>producer.properties</strong><a class="headerlink" href="#producer-properties" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Holds all the neccessary config data needed for Producer (Refer apache Kafka guide for more information).The values present here are default options and does nto require any changes</p>
+</div></blockquote>
+</div>
+<div class="section" id="email-properties">
+<h2><strong>email.properties</strong><a class="headerlink" href="#email-properties" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Holds all the configuration data to send email.</p>
+</div></blockquote>
+</div>
+<div class="section" id="scanner-configuration-properties">
+<h2><strong>scanner-configuration.properties</strong><a class="headerlink" href="#scanner-configuration-properties" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>This is the core configuration file. Update all the config for enabling search on twitter/github(To get tokens and key refer respective sites).</p>
+</div></blockquote>
+<p>For pastie sites and reddit there is no need for any changes in config.</p>
+<p><em>Note:However in all cases make sure to change “searchterms” to values of our choice to search. If there are multiple search terms then add them seperate by comma like the example data provided in config file.</em></p>
+<p><strong>Understanding more about scanner-configuration.properties file.</strong></p>
+<p>For any pastie site configuration is as below:</p>
+<p><em>Note:leave the pastie sites configuration as is and just change the search terms as requried by the organization. This will do good.</em></p>
+<ul class="simple">
+<li><p>scrapper.(pastie name).profile=(Pastie profile name)</p></li>
+<li><p>scrapper.(pastie name).homeurl=(URL from where pastie ids a extracted)</p></li>
+<li><p>scrapper.(pastie name).regex=(Regex to fetch pastie ids)</p></li>
+<li><p>scrapper.(pastie name).downloadurl= (URL to get information about each apstie)</p></li>
+<li><p>scrapper.(pastie name).searchterms=(Mention terms to be searched seperated by comma)</p></li>
+<li><p>scrapper.(pastie name).timetosleep=(Time for which pastie thread will sleep before fetching pastie ids again)</p></li>
+</ul>
+<p>For github search configuration is as below:</p>
+<ul class="simple">
+<li><p>scrapper.github.profile=Github</p></li>
+<li><p>scrapper.github.baseurl=https://api.github.com/search/code?q={searchTerm}&amp;sort=indexed&amp;order=asc</p></li>
+<li><p>scrapper.github.access_token=(Get your own github access token)</p></li>
+<li><p>scrapper.github.searchterms=(Mention terms to be searched seperated by comma)</p></li>
+<li><p>scrapper.github.timetosleep=(Time for which github thred should sleep before searching again)</p></li>
+</ul>
+<p>For reditt search configuration is as below:
+* scrapper.reddit.profile=Reddit</p>
+<ul class="simple">
+<li><p>scrapper.reddit.baseurl=https://www.reddit.com/search.json?q={searchterm}</p></li>
+<li><p>scrapper.reddit.searchterms=(Mention terms to be searched seperated by comma)</p></li>
+<li><p>scrapper.reddit.timetosleep=(Time for which github thred should sleep before searching again)</p></li>
+</ul>
+<p>For Twitter search configuration is as below:
+* scrapper.twitter.apikey=test</p>
+<ul class="simple">
+<li><p>scrapper.twitter.profile=Twitter</p></li>
+<li><p>scrapper.twitter.searchterms=(Mention terms to be searched seperated by comma)</p></li>
+<li><p>scrapper.twitter.consumerKey=(Get your own consumer key)</p></li>
+<li><p>scrapper.twitter.consumerSecret=(Get your own consumerSecret)</p></li>
+<li><p>scrapper.twitter.accessToken=(Get your own accessToken)</p></li>
+<li><p>scrapper.twitter.accessTokenSecret=(Get your own accessTokenSecret)</p></li>
+</ul>
+</div>
 </div>
 
 

@@ -23,9 +23,4 @@ Welcome to Real Time Threat Monitoring Tool's documentation!
 
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

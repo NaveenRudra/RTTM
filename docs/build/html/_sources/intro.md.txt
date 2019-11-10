@@ -6,6 +6,8 @@ Intro
    :align: right
    :class: intro-logo
 
+**Why this tool?**
+------------------
 Monitoring possible threats of your company on Internet is an impossible task to be achieved manually. Hence many threats of the company goes unnoticed until it becomes viral in public. Thus causing monetary/reputation damage. This is where RTTM comes into action. RTTM (Real Time Threat Monitoring Tool) is a tool developed to scrap all pasties,github,reddit..etc in real time to identify occurrence of search terms configured. Upon match an email will be triggered. Thus allowing company to react in case of leakage of code, any hacks tweeted..etc.. and harden themselves against an attack before it goes viral.
 
 Over the past 2 years the tool has evolved from simple search. Artificial intelligence has been implemented to perform better search based on context. If regex is needed even that is supported. Thus behaviour is close to human and reduces false positives.
@@ -17,6 +19,7 @@ The same tool in malicious user hands can be used offensively to get update on a
 List of sites which will be monitored are:
 
 **Non-Pastie Sites:**
+------------------------
 
 * Twitter
 
@@ -26,6 +29,7 @@ List of sites which will be monitored are:
 
 
 **Pastie Sites**
+------------------------
 
 * Pastebin.com
 
