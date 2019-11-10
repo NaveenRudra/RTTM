@@ -16,33 +16,21 @@ The same tool in malicious user hands can be used offensively to get update on a
 
 List of sites which will be monitored are:
 
-
-Bullet points
--------------
-
-This is a subsection making bullet points
-
-* point A
-
-* point B
-
-* point C
-
 **Non-Pastie Sites:**
-#.Twitter
-#.Reddit
-#.Github
+* Twitter
+* Reddit
+* Github
 
 **Pastie Sites**
-*Pastebin.com
-*Codepad.org
-*Dumpz.org
-*Snipplr.com
-*Paste.org.ru
-*Gist.github.com
-*Pastebin.ca
-*Kpaste.net
-*Slexy.org
-*Ideone.com
-*Pastebin.fr
+* Pastebin.com
+* Codepad.org
+* Dumpz.org
+* Snipplr.com
+* Paste.org.ru
+* Gist.github.com
+* Pastebin.ca
+* Kpaste.net
+* Slexy.org
+* Ideone.com
+* Pastebin.fr
 
