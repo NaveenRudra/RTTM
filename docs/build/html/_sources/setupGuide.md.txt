@@ -1,7 +1,7 @@
 SetupGuide
 ==========
 
-**Install via Docker**
+Install via Docker
 ---------------------------------------------------
 
 * Install docker in your system

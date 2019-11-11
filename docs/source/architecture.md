@@ -7,7 +7,7 @@ Architecture
 
 The architectural diagram of the tool is as above.
 
-**How it works**
+How it works
 -----------------
 
 Once the tool is started , engine gets kicked off and it runs forever. The main input for this engine is the configuration file. Based on the configuration file data, engine goes ahead and probes twitter/github/reddit for matches configured in configuration file. Upon a match is found, the link of twitter/github/reddit pushed to sqlite DB and an email alert is triggered.

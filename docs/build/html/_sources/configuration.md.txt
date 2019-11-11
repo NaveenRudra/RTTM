@@ -7,15 +7,15 @@ Before using this tool is is neccessary to understand the properties file presen
 ------------------------
  Holds all the neccessary config data needed for consumer of Kafka (Refer apache Kafka guide for more information). The values present here are default options and does nto require any changes
 
-**producer.properties**
+producer.properties
 ------------------------
  Holds all the neccessary config data needed for Producer (Refer apache Kafka guide for more information).The values present here are default options and does nto require any changes
 
-**email.properties**
+email.properties
 ------------------------
  Holds all the configuration data to send email.
 
-**scanner-configuration.properties**
+scanner-configuration.properties
 -------------------------------------
  This is the core configuration file. Update all the config for enabling search on twitter/github(To get tokens and key refer respective sites).
 
