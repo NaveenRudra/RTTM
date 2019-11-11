@@ -3,7 +3,7 @@ Configuration
 
 Before using this tool is is neccessary to understand the properties file present in scrapper_config directory.
 
-**consumer.properties**
+consumer.properties
 ------------------------
  Holds all the neccessary config data needed for consumer of Kafka (Refer apache Kafka guide for more information). The values present here are default options and does nto require any changes
 
