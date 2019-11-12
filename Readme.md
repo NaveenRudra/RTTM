@@ -1,5 +1,6 @@
 <div>
-[![Arsenal-2018-ASIA](https://github.com/toolswatch/badges/blob/master/arsenal/asia/2018.svg)]
+	
+<img src="https://github.com/toolswatch/badges/blob/master/arsenal/asia/2018.svg"/>
 
 <br/>
 <h1>Real Time Threat Monitoring Tool</h1>
