@@ -1,5 +1,5 @@
 <div>
-	
+
 <img src="https://github.com/toolswatch/badges/blob/master/arsenal/asia/2018.svg"/>
 
 <br/>
@@ -58,6 +58,7 @@ Over the past 2 years the tool has evolved from simple search. Artificial intell
 https://real-time-threat-monitoring.readthedocs.io/en/latest/
 
 
+<h2>Developers:</h2>
 
 <b>Authors:</b>
 <ul>
