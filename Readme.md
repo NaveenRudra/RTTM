@@ -1,6 +1,7 @@
 <div>
 
 <img src="https://github.com/toolswatch/badges/blob/master/arsenal/asia/2018.svg"/>
+<img src="https://img.shields.io/twitter/follow/rttmscrapper.svg?style=social&label=Follow%20%40rttmscrapper"/>(https://twitter.com/intent/user?screen_name=rttmscrapper "Follow RTTM on Twitter")
 
 <br/>
 <h1>Real Time Threat Monitoring Tool</h1>
