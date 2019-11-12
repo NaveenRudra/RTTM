@@ -1,4 +1,7 @@
 <div>
+[![Arsenal-2018-ASIA](https://github.com/toolswatch/badges/blob/master/arsenal/asia/2018.svg)]
+
+<br/>
 <h1>Real Time Threat Monitoring Tool</h1>
 <img src="RTTM_Logo.png" width='30%' align="right"/>
 </div>
@@ -50,7 +53,7 @@ In case of pastie sites the logic is different. The reason being they do not sup
 
 Over the past 2 years the tool has evolved from simple search. Artificial intelligence has been implemented to perform better search based on context. If regex is needed even that is supported. Thus behaviour is close to human and reduces false positives.
 
-For more informaton about the tool and setup information refer:
+<h2>Detailed Tool Documentation:</h2>
 https://real-time-threat-monitoring.readthedocs.io/en/latest/
 
 
