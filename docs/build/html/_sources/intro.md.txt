@@ -28,7 +28,7 @@ Non-Pastie Sites:
 * Github
 
 
-**Pastie Sites**
+Pastie Sites
 ------------------------
 
 * Pastebin.com

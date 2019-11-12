@@ -20,6 +20,6 @@ Refer link https://help.github.com/en/github/authenticating-to-github/creating-a
 
 Pastebin.com
 -------------
-In case of pastebin.com it is not neccessary to generate apiKey but you need to whitelist your IP. For thsi you have to pay and get your IP whitelisted.
+In case of pastebin.com it is not neccessary to generate apiKey but you need to whitelist your IP. For this you have to pay and get your IP whitelisted.
 
 Refer https://pastebin.com/doc_scraping_api for detailed information.

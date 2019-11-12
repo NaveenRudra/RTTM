@@ -1,7 +1,7 @@
 Debugging
 =========
 
-Follow belwo steps in case you find issues will working of tool.
+Follow below steps in case you find issues while working of tool.
 
 * Whenever you face issue with tool. Look into logs what is displayed. Sometime apiKey will expired you may have to regenerate it.
 
