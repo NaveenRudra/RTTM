@@ -29,10 +29,6 @@ RUN wget -q \
     && mv /opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION} /opt/kafka
 
 
-ADD script/run.sh /usr/local/bin/run.sh
-
-RUN chmod a+x /usr/local/bin/run.sh
-
 WORKDIR /opt/RTTM
 
 RUN git clone https://github.com/NaveenRudra/RTTM.git
