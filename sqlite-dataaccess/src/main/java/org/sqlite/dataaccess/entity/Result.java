@@ -1,16 +1,18 @@
 package org.sqlite.dataaccess.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
-import javax.persistence.CollectionTable;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
 
 /**
  * 
@@ -22,29 +24,21 @@ public class Result implements Serializable {
 	private static final long serialVersionUID = -7250234396452258822L;
 
 	@Id
-	@Column(name = "url",unique = true, nullable = false)
-	//@GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY)
-	//private Integer id;
+	@Column(name = "url",unique = true, updatable = false, nullable = false)
 	private String url;
 	private String time;
 	private String searchedtext;
 	@Column(length=1000000)
 	@Lob
-	private ArrayList<String> searchedTerms;
+	@ManyToMany(fetch=FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	@JoinTable(name="result_search_item", joinColumns = {
+			@JoinColumn(name = "url", nullable = false)},
+			inverseJoinColumns = { @JoinColumn(name = "id", 
+			nullable = false)}
+	)
+	private Set<SearchItem> searchedItemSet = new HashSet<SearchItem>();
+	@Column(name = "is_valid")
 	private Boolean isValid;
-	@Column(length=1000000)
-	@Lob
-	private ArrayList<String> secrets;
-	private Boolean is_valid;
-	
-	
-	public Boolean getIs_valid() {
-		return is_valid;
-	}
-
-	public void setIs_valid(Boolean is_valid) {
-		this.is_valid = is_valid;
-	}
 
 	public Boolean getIsValid() {
 		return isValid;
@@ -53,16 +47,6 @@ public class Result implements Serializable {
 	public void setIsValid(Boolean isValid) {
 		this.isValid = isValid;
 	}
-
-	public ArrayList<String> getSecrets() {
-		return secrets;
-	}
-
-	public void setSecrets(ArrayList<String> secrets) {
-		this.secrets = secrets;
-	}
-
-
 
 	public String getBotName() {
 		return botName;
@@ -73,16 +57,6 @@ public class Result implements Serializable {
 	}
 
 	private String botName;
-
-	// add one extra column from future perspective
-	// add one extra column if it is false or true
-	public ArrayList<String> getSearchedTerms() {
-		return searchedTerms;
-	}
-
-	public void setSearchedTerms(ArrayList<String> searchedTerms) {
-		this.searchedTerms = searchedTerms;
-	}
 
 	public String getUrl() {
 		return url;
@@ -108,12 +82,51 @@ public class Result implements Serializable {
 		this.searchedtext = searchedtext;
 	}
 
-	/**public Integer getId() {
-		return id;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((time == null) ? 0 : time.hashCode());
+		result = prime * result + ((url == null) ? 0 : url.hashCode());
+		return result;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}**/
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Result other = (Result) obj;
+		if (time == null) {
+			if (other.time != null)
+				return false;
+		} else if (!time.equals(other.time))
+			return false;
+		if (url == null) {
+			if (other.url != null)
+				return false;
+		} else if (!url.equals(other.url))
+			return false;
+		return true;
+	}
 
+	// add one extra column from future perspective
+	// add one extra column if it is false or true
+	public Set<SearchItem> getSearchedTerms() {
+		return searchedItemSet;
+	}
+
+	public void setSearchedTerms(Set<SearchItem> searchedItemSet) {
+		this.searchedItemSet = searchedItemSet;
+	}
+
+	@Override
+	public String toString() {
+		return "Result [url=" + url + ", time=" + time + ", searchedtext=" + searchedtext + ", searchedItemSet="
+				+ searchedItemSet + ", isValid=" + isValid + ", botName=" + botName + "]";
+	}
+	
 }

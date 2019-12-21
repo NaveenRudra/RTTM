@@ -1,6 +1,5 @@
 package com.rts.mysql.dao;
 
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -26,7 +25,12 @@ public class Result implements Serializable {
 	private String url;
 	private String time;
 	private String searchedtext;
-	private ArrayList<String> searchedTerms;
+
+	@ManytoMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinTable(name = "result_search_item", joinColumns = {
+			@JoinColumn(name = "url", nullable = false, updatable = false) }, inverseJoinColumns = {
+					@JoinColumn(name = "id", nullable = false, updatable = false) })
+	private Set<String> searchedTerms;
 
 	public String getBotName() {
 		return botName;
@@ -44,7 +48,7 @@ public class Result implements Serializable {
 		return searchedTerms;
 	}
 
-	public void setSearchedTerms(ArrayList<String> searchedTerms) {
+	public void setSearchedTerms(Set<SearchItem> searchedTerms) {
 		this.searchedTerms = searchedTerms;
 	}
 
