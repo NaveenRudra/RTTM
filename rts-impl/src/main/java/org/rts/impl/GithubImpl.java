@@ -5,12 +5,14 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Properties;
 import java.util.Set;
+
 import org.apache.log4j.Logger;
-import org.rts.base.Scrapper;
 import org.kafkaparser.utilities.DbUtil;
 import org.kafkaparser.utilities.EmailUtility;
+import org.rts.base.Scrapper;
 import org.rts.utilities.JsonParserForGithub;
 import org.rts.utilities.TruffleHog;
+import org.sqlite.dataaccess.entity.SearchItem;
 import org.sqlite.dataaccess.util.DaoUtil;
 
 public class GithubImpl implements Scrapper {
@@ -49,9 +51,9 @@ public class GithubImpl implements Scrapper {
 		while(true)
 		{
 			try {
-				for(String searchterm:searchTerms)
+				for (String searchTerm : searchTerms)
 				{
-					Set<String> alertSet=JsonParserForGithub.githubUrlFetcher(baseurl.replace("{searchTerm}", searchterm.replace(" ", "%20"))+"&access_token="+access_token);
+					Set<String> alertSet=JsonParserForGithub.githubUrlFetcher(baseurl.replace("{searchTerm}", searchTerm.replace(" ", "%20"))+"&access_token="+access_token);
 					System.out.println("Got url" + alertSet);
 					ArrayList<Thread> threads= new ArrayList<>();
 					if(trufflehogregex.equals("true") || trufflehogentropy.equals("true"))
@@ -65,7 +67,7 @@ public class GithubImpl implements Scrapper {
 								{
 									System.out.println("Analyzing url************" + url);
 									TruffleHog truffleHogThread = new TruffleHog();
-									truffleHogThread.initilaize(url, searchterm,profile,trufflehogregex,trufflehogentropy);
+									truffleHogThread.initilaize(url, searchTerm,profile,trufflehogregex,trufflehogentropy);
 									Thread t = new Thread(truffleHogThread);
 									threads.add(t);							
 									t.start();
@@ -87,13 +89,15 @@ public class GithubImpl implements Scrapper {
 								filteredalertSet.add(url);
 							}
 						}
-						EmailUtility.sendEmailUsingGmail(profile, filteredalertSet, searchterm);
+						EmailUtility.sendEmailUsingGmail(profile, filteredalertSet, searchTerm);
 						for(String url:filteredalertSet)
 						{
 							if(!DaoUtil.searchDuplicateByUrl(url))
 							{
-								ArrayList<String> temp=new ArrayList<String>();
-								temp.add(searchterm);
+								final Set<SearchItem> temp=new HashSet<SearchItem>();
+								final SearchItem searchItem = new SearchItem();
+								searchItem.setSearchItem(searchTerm);
+								temp.add(searchItem);
 								DbUtil.addNewEntry(temp, url,profile);
 							
 						     }

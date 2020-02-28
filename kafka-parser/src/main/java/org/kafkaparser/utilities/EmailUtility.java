@@ -62,7 +62,7 @@ public class EmailUtility {
 	    }
 	
 	
-	public static void sendEmailUsingGmail(String botName,Set<String> alertSet,String termfound )
+	public static void sendEmailUsingGmail(String botName, Set<String> alertSet, String termfound)
 	{
 		System.out.println("Search term has been found in "+botName+" terms is "+termfound);
 		try {

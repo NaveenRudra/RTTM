@@ -4,11 +4,14 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
+
 import org.sqlite.dataaccess.entity.Result;
+import org.sqlite.dataaccess.entity.SearchItem;
 
 public class DaoUtil {
 
@@ -19,15 +22,31 @@ public class DaoUtil {
 	}
 	
 	@Transactional
-	public synchronized static void insert(Result data)
-	{	
+	public synchronized static void insert(Result data) {
+		try {
 			EMfactory.em.getTransaction().begin();
 			EMfactory.em.persist(data);
-			//EMfactory.em.flush();
 			EMfactory.em.getTransaction().commit();
-
+		} catch(final Exception e) {
+			e.printStackTrace();
+		} finally {
+			//EMfactory.em.close();
+		}
 	}
 	
+	@Transactional
+	public synchronized static void merge(Result data) {
+		try {
+			EMfactory.em.getTransaction().begin();
+			EMfactory.em.merge(data);
+			EMfactory.em.getTransaction().commit();
+		} catch(final Exception e) {
+			e.printStackTrace();
+		} finally {
+			//EMfactory.em.close();
+		}
+	}	
+
 	@Transactional
 	public synchronized static boolean searchDuplicateByUrl(String url)
 	{
@@ -78,8 +97,10 @@ public class DaoUtil {
 			}
 			
 			Result person = new Result();
-			ArrayList<String> test=new ArrayList<>();
-			test.add("asd");
+			Set<SearchItem> test=new HashSet<SearchItem>();
+			final SearchItem searchItem = new SearchItem();
+			searchItem.setSearchItem("asd");
+			test.add(searchItem);
 			person.setSearchedTerms(test);
 			person.setSearchedtext("some lines up and down man");
 			person.setUrl("http://google.com71");
