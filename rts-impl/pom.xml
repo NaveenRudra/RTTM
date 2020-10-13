@@ -22,7 +22,7 @@
         	<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.9</version>
+			<version>4.13.1</version>
 			<scope>test</scope>
 		</dependency>
   <!-- I need to add new dependency of github in this pom can be done only at home some issues here as of now in office -->
